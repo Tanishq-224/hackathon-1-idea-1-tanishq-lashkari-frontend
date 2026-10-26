@@ -1,0 +1,162 @@
+{
+  "brand": {
+    "name": "Iturrieta Sagardotegia",
+    "shortName": "Iturrieta",
+    "tagline": "Sidrería vasca tradicional"
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "menu": "Menú y experiencias",
+    "reserve": "Reservas",
+    "contact": "Contacto",
+    "bookTable": "Reservar mesa",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "main": "Navegación principal"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "eu": "Euskara",
+    "es": "Español",
+    "fr": "Français",
+    "ca": "Català"
+  },
+  "footer": {
+    "explore": "Explorar",
+    "visit": "Visítanos",
+    "address": "País Vasco, España",
+    "phone": "+34 000 000 000",
+    "hours": "Horario de temporada — próximamente",
+    "staffLogin": "Acceso personal / admin",
+    "rights": "Todos los derechos reservados."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Iturrieta Sagardotegia",
+      "trust": "Sagardotegia tradicional · País Vasco",
+      "titleLine1": "Del manzano",
+      "titleLine2Lead": "al",
+      "titleBefore": "Del manzano al",
+      "titleAfter": "Txotx.",
+      "rotatingTexts": [
+        "Txotx.",
+        "Tradición.",
+        "El barril.",
+        "Sidra natural."
+      ],
+      "title": "Del manzano al Txotx.",
+      "subheadline": "Sidra natural, platos a la brasa y largas veladas en la mesa de la sidrería vasca.",
+      "description": "Sidra natural, platos a la brasa y el ritual del txotx — una experiencia de sagardotegia vasca.",
+      "primaryCta": "Reservar mesa",
+      "secondaryCta": "Descubrir más",
+      "slides": {
+        "farmhouse": "Casas rurales y valles cerca de la sidrería",
+        "interior": "Comedor tradicional con toneles de sidra",
+        "terrace": "Caserío de piedra y terraza exterior",
+        "harvest": "Recogida de manzanas en el huerto",
+        "outdoor": "Terraza exterior con vistas a la montaña"
+      }
+    },
+    "about": {
+      "title": "Un proyecto familiar en el corazón del País Vasco",
+      "body": "Iturrieta Sagardotegia nace de una idea sencilla: mantener viva la sagardotegia — comida honesta, sidra natural del barril y un lugar acogedor ligado a la tierra.",
+      "stat1": { "value": "Natural", "label": "Sidra de manzanas locales" },
+      "stat2": { "value": "Estacional", "label": "Menú durante el año" },
+      "stat3": { "value": "Txotx", "label": "Tradición del barril" },
+      "link": "Leer más sobre nosotros",
+      "imageAlt": "Caserío vasco tradicional de piedra"
+    },
+    "menu": {
+      "eyebrow": "Menú de sagardotegia",
+      "title": "Menú de la sidrería",
+      "price": "Menú — precio bajo consulta",
+      "priceNote": "Precios finales y platos de temporada se confirmarán antes del lanzamiento.",
+      "item1": {
+        "name": "Tortilla de bacalao",
+        "description": "Entrante clásico — detalles por confirmar en el menú definitivo."
+      },
+      "item2": {
+        "name": "Bacalao a la parrilla",
+        "description": "Plato de pescado tradicional con guarniciones de temporada."
+      },
+      "item3": {
+        "name": "Chuletón",
+        "description": "Pieza a la brasa para compartir en la mesa larga."
+      },
+      "item4": {
+        "name": "Queso local y membrillo",
+        "description": "Plato final sencillo maridado con sidra natural."
+      },
+      "item5": {
+        "name": "Sidra natural",
+        "description": "Servicio desde el barril durante el txotx — modalidad por confirmar."
+      },
+      "link": "Ver menú y experiencias completas"
+    },
+    "cider": {
+      "title": "De nuestra manzana, sidra natural",
+      "body": "Cada temporada empieza en el huerto. Las manzanas se prensan y fermentan hasta que la bodega acoge el txotx — sidra directa del barril a la copa.",
+      "stat1": { "value": "100%", "label": "Fermentación natural" },
+      "stat2": { "value": "Local", "label": "Variedades de manzana" },
+      "stat3": { "value": "Txotx", "label": "Directo del barril" },
+      "cta": "Explorar sidra y menú",
+      "imageAlt": "Manzanas frescas para la elaboración de sidra"
+    },
+    "txotx": {
+      "title": "¡Txotx!",
+      "description": "Reúnete en el barril, llena tu copa y toma asiento — el corazón de cada velada en la sagardotegia.",
+      "cta": "Reservar mesa"
+    },
+    "music": {
+      "eyebrow": "Veladas en la casa",
+      "title": "Música en vivo en la sidrería",
+      "body": "En fechas seleccionadas, músicos locales acompañan la comida en el comedor. Calendario completo próximamente.",
+      "schedule1": "Programa de temporada — fechas por anunciar",
+      "schedule2": "Consulta la página de contacto para novedades",
+      "imageAlt": "Comensales en el comedor de la sidrería"
+    },
+    "production": {
+      "title": "Descubre cómo nace la sidra",
+      "intro": "De la flor al barril, la sidra sigue el ritmo del huerto. Estos pasos resumen el proceso — el contenido del tour se ampliará más adelante.",
+      "step1": {
+        "title": "Cosecha",
+        "body": "Las manzanas se recogen en su punto en el huerto."
+      },
+      "step2": {
+        "title": "Prensa y fermentación",
+        "body": "El mosto se prensa y fermenta con tiempo y cuidado."
+      },
+      "step3": {
+        "title": "Reposo en bodega",
+        "body": "La sidra reposa hasta alcanzar el carácter adecuado para el txotx."
+      },
+      "step4": {
+        "title": "Servicio txotx",
+        "body": "Los invitados se acercan al barril cuando se abre cada kupela de la temporada."
+      },
+      "link": "Conoce nuestra historia",
+      "imageAlt": "Cosecha de manzanas en el huerto"
+    },
+    "location": {
+      "title": "Entre montañas, cerca de Vitoria-Gasteiz",
+      "description": "La sidrería se encuentra en un valle verde — direcciones y tiempos de viaje en la página de contacto.",
+      "cta": "Contacto y cómo llegar"
+    }
+  },
+  "placeholder": {
+    "comingSoon": "Esta sección está en preparación. Contenido y funciones llegarán en una fase posterior.",
+    "backHome": "Volver al inicio"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscas no existe. Prueba la navegación o vuelve al inicio."
+  },
+  "staff": {
+    "loginTitle": "Acceso personal",
+    "loginDescription": "La autenticación se conectará al backend en una fase posterior. Esta página es provisional.",
+    "dashboardTitle": "Área de personal",
+    "dashboardDescription": "Las herramientas protegidas aparecerán cuando la autenticación esté implementada."
+  }
+}

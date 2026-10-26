@@ -1,0 +1,162 @@
+{
+  "brand": {
+    "name": "Iturrieta Sagardotegia",
+    "shortName": "Iturrieta",
+    "tagline": "Euskal sagardotegi tradizionala"
+  },
+  "nav": {
+    "home": "Hasiera",
+    "about": "Guri buruz",
+    "menu": "Menua eta esperientziak",
+    "reserve": "Erreserbak",
+    "contact": "Kontaktua",
+    "bookTable": "Mahaia erreserbatu",
+    "openMenu": "Menua ireki",
+    "closeMenu": "Menua itxi",
+    "main": "Nabigazio nagusia"
+  },
+  "language": {
+    "label": "Hizkuntza",
+    "en": "English",
+    "eu": "Euskara",
+    "es": "Español",
+    "fr": "Français",
+    "ca": "Català"
+  },
+  "footer": {
+    "explore": "Esploratu",
+    "visit": "Bisitatu",
+    "address": "Euskal Herria, Espainia",
+    "phone": "+34 000 000 000",
+    "hours": "Denboraldiko ordutegia — laster",
+    "staffLogin": "Langile / admin saioa",
+    "rights": "Eskubide guztiak erreserbatuta."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Iturrieta Sagardotegia",
+      "trust": "Sagardotegi tradizionala · Euskal Herria",
+      "titleLine1": "Sagondotik",
+      "titleLine2Lead": "",
+      "titleBefore": "Sagondotik",
+      "titleAfter": "Txotxera.",
+      "rotatingTexts": [
+        "Txotxera.",
+        "Tradizioa.",
+        "Upela.",
+        "Sagardo naturala."
+      ],
+      "title": "Sagondotik Txotxera.",
+      "subheadline": "Sagardo naturala, parrillan prestatutako platerak eta gau luzeak euskal sagardotegiko mahaiaren inguruan.",
+      "description": "Sagardo naturala, parrillan prestatutako platerak eta txotx errituala — euskal sagardotegi esperientzia.",
+      "primaryCta": "Mahaia erreserbatu",
+      "secondaryCta": "Gehiago ezagutu",
+      "slides": {
+        "farmhouse": "Sagardotegitik hurbil baserri eta haran ikuspegiak",
+        "interior": "Sagardo upelak dituelarren jantokia tradizionala",
+        "terrace": "Harrizko baserria eta kanpo terraza",
+        "harvest": "Sagastian sagar bilketa",
+        "outdoor": "Mendiko ikuspegiekin kanpo terraza"
+      }
+    },
+    "about": {
+      "title": "Euskal herrialdeko bihotzean proiektu familiar bat",
+      "body": "Iturrieta Sagardotegiak ideia sinple batetik sortzen da: sagardotegi izaera bizirik mantentzea — janari zintzoa, upeltik sagardoa eta lurraldearekin lotutako giro atseginia.",
+      "stat1": { "value": "Naturala", "label": "Sagar lokalen sagardoa" },
+      "stat2": { "value": "Denboraldikoa", "label": "Urteko menua" },
+      "stat3": { "value": "Txotx", "label": "Upel ondoko tradizioa" },
+      "link": "Gehiago irakurri guri buruz",
+      "imageAlt": "Harrizko euskal baserri tradizionala"
+    },
+    "menu": {
+      "eyebrow": "Sagardotegi menua",
+      "title": "Sagardotegi menua",
+      "price": "Menua — prezioa galdetu",
+      "priceNote": "Azken prezioak eta denboraldiko platerak abiarazi aurretik baieztatuko dira.",
+      "item1": {
+        "name": "Bakailao tortila",
+        "description": "Hasierako plater klasikoa — xehetasunak menu finalerako."
+      },
+      "item2": {
+        "name": "Bakailao erreta",
+        "description": "Sagardotegi arruntaren arrain platera denboraldiko osagarriekin."
+      },
+      "item3": {
+        "name": "Txuleta",
+        "description": "Sutzetan egindako plater nagusia mahai luzean partekatzeko."
+      },
+      "item4": {
+        "name": "Tokiko gazta eta membrilloa",
+        "description": "Sagardo naturalarekin lagundutako plater sinplea amaitzeko."
+      },
+      "item5": {
+        "name": "Sagardo naturala",
+        "description": "Txotxean upeltik — zerbitzu modua baieztatu behar da."
+      },
+      "link": "Menu eta esperientzia osoa ikusi"
+    },
+    "cider": {
+      "title": "Gure sagarretik, sagardo naturala",
+      "body": "Denboraldi bakoitza sagastian hasten da. Sagarrak prentsa eta hartzegiten dira upela gonbidatuak txotxerako prest egon arte.",
+      "stat1": { "value": "100%", "label": "Hartzidura naturala" },
+      "stat2": { "value": "Lokala", "label": "Sagar barietateak" },
+      "stat3": { "value": "Txotx", "label": "Zuzenean upeltik" },
+      "cta": "Sagardoa eta menua esploratu",
+      "imageAlt": "Sagardo ekoizpenerako sagar freskoak"
+    },
+    "txotx": {
+      "title": "Txotx!",
+      "description": "Bildu upelaren ondoan, bete zure kopa eta eseri — sagardotegi gau bakoitzaren bihotza.",
+      "cta": "Mahaia erreserbatu"
+    },
+    "music": {
+      "eyebrow": "Gauak etxean",
+      "title": "Zuzeneko musika sagardotegian",
+      "body": "Data hautatuetan, tokiko musikariak jantokian janariarekin laguntzen dute. Egutegi osoa laster.",
+      "schedule1": "Denboraldiko programa — datak iragarriko dira",
+      "schedule2": "Eguneratzeetarako kontaktu orria",
+      "imageAlt": "Sagardotegiko jantokian gonbidatuak"
+    },
+    "production": {
+      "title": "Ikasi nola sortzen den sagardoa",
+      "intro": "Loretik upelera, sagardoak sagastiaren erritmoa jarraitzen du. Urrats hauek prozesua laburbiltzen dute.",
+      "step1": {
+        "title": "Bilketa",
+        "body": "Sagarrak heldutasunean jasotzen dira sagastian."
+      },
+      "step2": {
+        "title": "Prentsa eta hartzidura",
+        "body": "Zukua prentsatzen da eta denborarekin natural hartzten da."
+      },
+      "step3": {
+        "title": "Upel atsedena",
+        "body": "Sagardoak atseden hartzen du txotxerako egokia izan arte."
+      },
+      "step4": {
+        "title": "Txotx zerbitzua",
+        "body": "Gonbidatuak upelera hurbiltzen dira denboraldiko kupela bakoitza irekitzean."
+      },
+      "link": "Gure historia ezagutu",
+      "imageAlt": "Sagastian sagar bilketa"
+    },
+    "location": {
+      "title": "Mendien artean, Gasteiztik hurbil",
+      "description": "Sagardotegia haran berde batean dago — norabideak kontaktu orrian.",
+      "cta": "Kontaktua eta norabideak"
+    }
+  },
+  "placeholder": {
+    "comingSoon": "Atal hau prestatzen ari gara. Edukia eta funtzioak hurrengo etapan.",
+    "backHome": "Hasierara itzuli"
+  },
+  "notFound": {
+    "title": "Orria ez da aurkitu",
+    "description": "Bilatzen duzun orria ez dago hemen. Saiatu nabigazioa edo itzuli hasierara."
+  },
+  "staff": {
+    "loginTitle": "Langile saioa",
+    "loginDescription": "Autentifikazioa backendarekin lotuko da hurrengo etapan. Orrialde behin-behinekoa.",
+    "dashboardTitle": "Langile eremua",
+    "dashboardDescription": "Tresna babestuak autentifikazioa prest dagoenean agertuko dira."
+  }
+}

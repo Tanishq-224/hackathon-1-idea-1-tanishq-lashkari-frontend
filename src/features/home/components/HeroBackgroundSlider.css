@@ -1,0 +1,20 @@
+.hero-bg-slide {
+  transition: opacity 1600ms ease-in-out;
+  will-change: opacity;
+}
+
+.hero-bg-blur {
+  transform: scale(1.05);
+  filter: blur(8px) saturate(1.25) brightness(0.92);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-slide {
+    transition-duration: 0ms;
+  }
+
+  .hero-bg-blur {
+    transform: none;
+    filter: blur(8px) saturate(1.05);
+  }
+}

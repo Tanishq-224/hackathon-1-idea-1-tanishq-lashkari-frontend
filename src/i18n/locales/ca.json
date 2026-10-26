@@ -1,0 +1,162 @@
+{
+  "brand": {
+    "name": "Iturrieta Sagardotegia",
+    "shortName": "Iturrieta",
+    "tagline": "Sidreria basca tradicional"
+  },
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre nosaltres",
+    "menu": "Menú i experiències",
+    "reserve": "Reserves",
+    "contact": "Contacte",
+    "bookTable": "Reservar taula",
+    "openMenu": "Obrir menú",
+    "closeMenu": "Tancar menú",
+    "main": "Navegació principal"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "eu": "Euskara",
+    "es": "Español",
+    "fr": "Français",
+    "ca": "Català"
+  },
+  "footer": {
+    "explore": "Explorar",
+    "visit": "Visita'ns",
+    "address": "País Basc, Espanya",
+    "phone": "+34 000 000 000",
+    "hours": "Horari de temporada — aviat",
+    "staffLogin": "Accés personal / admin",
+    "rights": "Tots els drets reservats."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Iturrieta Sagardotegia",
+      "trust": "Sagardotegia tradicional · País Basc",
+      "titleLine1": "Del pomer",
+      "titleLine2Lead": "al",
+      "titleBefore": "Del pomer al",
+      "titleAfter": "Txotx.",
+      "rotatingTexts": [
+        "Txotx.",
+        "Tradició.",
+        "El barril.",
+        "Sidra natural."
+      ],
+      "title": "Del pomer al Txotx.",
+      "subheadline": "Sidra natural, plats a la brasa i llargues vetllades a la taula de la sidreria basca.",
+      "description": "Sidra natural, plats a la brasa i el ritual del txotx — experiència de sagardotegia basca.",
+      "primaryCta": "Reservar taula",
+      "secondaryCta": "Descobrir més",
+      "slides": {
+        "farmhouse": "Mases i valls a prop de la sidreria",
+        "interior": "Menjador tradicional amb bótes de sidra",
+        "terrace": "Caserío de pedra i terrassa exterior",
+        "harvest": "Collita de pomes al verger",
+        "outdoor": "Terrassa amb vistes a la muntanya"
+      }
+    },
+    "about": {
+      "title": "Un projecte familiar al cor del País Basc",
+      "body": "Iturrieta Sagardotegia neix d’una idea senzilla: mantenir viu l’esperit sagardotegia — menjar honest, sidra natural del barril i un lloc acollidor lligat a la terra.",
+      "stat1": { "value": "Natural", "label": "Sidra de pomes locals" },
+      "stat2": { "value": "Estacional", "label": "Menú al llarg de l’any" },
+      "stat3": { "value": "Txotx", "label": "Tradició del barril" },
+      "link": "Llegir més sobre nosaltres",
+      "imageAlt": "Caserío basc tradicional de pedra"
+    },
+    "menu": {
+      "eyebrow": "Menú sagardotegia",
+      "title": "Menú de la sidreria",
+      "price": "Menú — preu sota consulta",
+      "priceNote": "Preus finals i plats de temporada es confirmaran abans del llançament.",
+      "item1": {
+        "name": "Truita de bacallà",
+        "description": "Entrant clàssic — detalls per confirmar al menú definitiu."
+      },
+      "item2": {
+        "name": "Bacallà a la graella",
+        "description": "Peix tradicional amb guarnicions de temporada."
+      },
+      "item3": {
+        "name": "Entrecot",
+        "description": "Peça a la brasa per compartir a la taula llarga."
+      },
+      "item4": {
+        "name": "Formatge local i codony",
+        "description": "Plat final senzill maridat amb sidra natural."
+      },
+      "item5": {
+        "name": "Sidra natural",
+        "description": "Servei des del barril durant el txotx — modalitat per confirmar."
+      },
+      "link": "Veure menú i experiències completes"
+    },
+    "cider": {
+      "title": "De la nostra poma, sidra natural",
+      "body": "Cada temporada comença al verger. Les pomes es premsen i fermenten fins al txotx — sidra directa del barril a la copa.",
+      "stat1": { "value": "100%", "label": "Fermentació natural" },
+      "stat2": { "value": "Local", "label": "Varietats de poma" },
+      "stat3": { "value": "Txotx", "label": "Directe del barril" },
+      "cta": "Explorar sidra i menú",
+      "imageAlt": "Pomes fresques per a la producció de sidra"
+    },
+    "txotx": {
+      "title": "Txotx!",
+      "description": "Reuneix-te al barril, omple la copa i pren seient — el cor de cada vetllada a la sagardotegia.",
+      "cta": "Reservar taula"
+    },
+    "music": {
+      "eyebrow": "Vetllades a casa",
+      "title": "Música en directe a la sidreria",
+      "body": "En dates seleccionades, músics locals acompanyen el dinar al menjador. Calendari complet aviat.",
+      "schedule1": "Programa de temporada — dates per anunciar",
+      "schedule2": "Segueix la pàgina de contacte per a novetats",
+      "imageAlt": "Comensals al menjador de la sidreria"
+    },
+    "production": {
+      "title": "Descobreix com neix la sidra",
+      "intro": "De la flor al barril, la sidra segueix el ritme del verger. Aquests passos resumeixen el procés.",
+      "step1": {
+        "title": "Collita",
+        "body": "Les pomes es recullen en el seu punt al verger."
+      },
+      "step2": {
+        "title": "Premsat i fermentació",
+        "body": "El suc es premsa i fermenta amb temps i cura."
+      },
+      "step3": {
+        "title": "Repòs a la celler",
+        "body": "La sidra reposa fins a tenir el caràcter adequat per al txotx."
+      },
+      "step4": {
+        "title": "Servei txotx",
+        "body": "Els convidats s’apropen al barril quan s’obri cada kupela de la temporada."
+      },
+      "link": "Coneix la nostra història",
+      "imageAlt": "Collita de pomes al verger"
+    },
+    "location": {
+      "title": "Entre muntanyes, a prop de Vitoria-Gasteiz",
+      "description": "La sidreria es troba en una vall verda — indicacions a la pàgina de contacte.",
+      "cta": "Contacte i com arribar"
+    }
+  },
+  "placeholder": {
+    "comingSoon": "Aquesta secció s’està preparant. Contingut i funcions en una fase posterior.",
+    "backHome": "Tornar a l’inici"
+  },
+  "notFound": {
+    "title": "Pàgina no trobada",
+    "description": "La pàgina que cerques no existeix. Prova la navegació o torna a l’inici."
+  },
+  "staff": {
+    "loginTitle": "Accés personal",
+    "loginDescription": "L’autenticació es connectarà al backend en una fase posterior. Pàgina provisional.",
+    "dashboardTitle": "Àrea de personal",
+    "dashboardDescription": "Les eines protegides apareixeran quan l’autenticació estigui implementada."
+  }
+}

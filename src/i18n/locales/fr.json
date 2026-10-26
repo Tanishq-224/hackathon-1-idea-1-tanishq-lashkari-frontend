@@ -1,0 +1,162 @@
+{
+  "brand": {
+    "name": "Iturrieta Sagardotegia",
+    "shortName": "Iturrieta",
+    "tagline": "Cidrerie basque traditionnelle"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "menu": "Menu et expériences",
+    "reserve": "Réservations",
+    "contact": "Contact",
+    "bookTable": "Réserver une table",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "main": "Navigation principale"
+  },
+  "language": {
+    "label": "Langue",
+    "en": "English",
+    "eu": "Euskara",
+    "es": "Español",
+    "fr": "Français",
+    "ca": "Català"
+  },
+  "footer": {
+    "explore": "Explorer",
+    "visit": "Nous rendre visite",
+    "address": "Pays basque, Espagne",
+    "phone": "+34 000 000 000",
+    "hours": "Horaires saisonniers — bientôt disponibles",
+    "staffLogin": "Connexion personnel / admin",
+    "rights": "Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Iturrieta Sagardotegia",
+      "trust": "Sagardotegia traditionnelle · Pays basque",
+      "titleLine1": "Du pommier",
+      "titleLine2Lead": "au",
+      "titleBefore": "Du pommier au",
+      "titleAfter": "Txotx.",
+      "rotatingTexts": [
+        "Txotx.",
+        "Tradition.",
+        "Le fût.",
+        "Cidre naturel."
+      ],
+      "title": "Du pommier au Txotx.",
+      "subheadline": "Cidre naturel, plats grillés et longues soirées à la table de la cidrerie basque.",
+      "description": "Cidre naturel, plats grillés et rituel du txotx — une expérience de sagardotegia basque.",
+      "primaryCta": "Réserver une table",
+      "secondaryCta": "En savoir plus",
+      "slides": {
+        "farmhouse": "Fermes et vallées près de la cidrerie",
+        "interior": "Salle à manger traditionnelle avec fûts de cidre",
+        "terrace": "Caserío en pierre et terrasse extérieure",
+        "harvest": "Récolte des pommes au verger",
+        "outdoor": "Terrasse avec vue sur les montagnes"
+      }
+    },
+    "about": {
+      "title": "Un projet familial au cœur du Pays basque",
+      "body": "Iturrieta Sagardotegia repose sur une idée simple : préserver l’esprit sagardotegia — cuisine honnête, cidre naturel du fût et un lieu chaleureux lié à la terre.",
+      "stat1": { "value": "Naturel", "label": "Cidre de pommes locales" },
+      "stat2": { "value": "Saisonnier", "label": "Menu tout au long de l’année" },
+      "stat3": { "value": "Txotx", "label": "Tradition du fût" },
+      "link": "En savoir plus sur nous",
+      "imageAlt": "Caserío basque traditionnel en pierre"
+    },
+    "menu": {
+      "eyebrow": "Menu sagardotegia",
+      "title": "Menu de la cidrerie",
+      "price": "Menu — prix sur demande",
+      "priceNote": "Tarifs définitifs et plats de saison confirmés avant l’ouverture.",
+      "item1": {
+        "name": "Omelette de morue",
+        "description": "Entrée classique — détails à confirmer sur le menu final."
+      },
+      "item2": {
+        "name": "Morue grillée",
+        "description": "Poisson traditionnel avec accompagnements de saison."
+      },
+      "item3": {
+        "name": "Côte de bœuf",
+        "description": "Pièce grillée à partager à la grande table."
+      },
+      "item4": {
+        "name": "Fromage local et coing",
+        "description": "Assiette finale simple avec cidre naturel."
+      },
+      "item5": {
+        "name": "Cidre naturel",
+        "description": "Service au fût pendant le txotx — modalité à confirmer."
+      },
+      "link": "Voir le menu et les expériences"
+    },
+    "cider": {
+      "title": "De notre pomme, cidre naturel",
+      "body": "Chaque saison commence au verger. Les pommes sont pressées et fermentées jusqu’au txotx — le cidre du fût directement dans le verre.",
+      "stat1": { "value": "100%", "label": "Fermentation naturelle" },
+      "stat2": { "value": "Local", "label": "Variétés de pommes" },
+      "stat3": { "value": "Txotx", "label": "Directement du fût" },
+      "cta": "Explorer cidre et menu",
+      "imageAlt": "Pommes fraîches pour la production de cidre"
+    },
+    "txotx": {
+      "title": "Txotx !",
+      "description": "Rassemblez-vous au fût, remplissez votre verre et prenez place — le cœur de chaque soirée sagardotegia.",
+      "cta": "Réserver une table"
+    },
+    "music": {
+      "eyebrow": "Soirées à la maison",
+      "title": "Musique live à la cidrerie",
+      "body": "À certaines dates, des musiciens locaux accompagnent le repas en salle. Calendrier complet bientôt.",
+      "schedule1": "Programme saisonnier — dates à annoncer",
+      "schedule2": "Suivez la page contact pour les actualités",
+      "imageAlt": "Convives dans la salle de la cidrerie"
+    },
+    "production": {
+      "title": "Découvrez comment naît le cidre",
+      "intro": "De la floraison au fût, le cidre suit le rythme du verger. Ces étapes résument le processus.",
+      "step1": {
+        "title": "Récolte",
+        "body": "Les pommes sont cueillies à maturité dans le verger."
+      },
+      "step2": {
+        "title": "Pressage et fermentation",
+        "body": "Le jus est pressé et fermenté naturellement avec patience."
+      },
+      "step3": {
+        "title": "Repos en cave",
+        "body": "Le cidre repose jusqu’à être prêt pour le txotx."
+      },
+      "step4": {
+        "title": "Service txotx",
+        "body": "Les convives s’approchent du fût à l’ouverture de chaque kupela."
+      },
+      "link": "Découvrir notre histoire",
+      "imageAlt": "Récolte de pommes au verger"
+    },
+    "location": {
+      "title": "Entre les montagnes, près de Vitoria-Gasteiz",
+      "description": "La cidrerie se situe dans une vallée verdoyante — itinéraire sur la page contact.",
+      "cta": "Contact et itinéraire"
+    }
+  },
+  "placeholder": {
+    "comingSoon": "Cette section est en préparation. Contenu et fonctionnalités à venir.",
+    "backHome": "Retour à l’accueil"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "La page demandée n’existe pas. Utilisez la navigation ou revenez à l’accueil."
+  },
+  "staff": {
+    "loginTitle": "Connexion personnel",
+    "loginDescription": "L’authentification sera connectée au backend ultérieurement. Page provisoire.",
+    "dashboardTitle": "Espace personnel",
+    "dashboardDescription": "Les outils protégés apparaîtront une fois l’authentification en place."
+  }
+}

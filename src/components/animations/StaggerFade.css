@@ -1,0 +1,9 @@
+.stagger-fade-item {
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stagger-fade-item {
+    will-change: auto;
+  }
+}

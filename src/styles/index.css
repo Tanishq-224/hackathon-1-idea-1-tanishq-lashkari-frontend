@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-charcoal: #1e211d;
+  --color-ivory: #e9e0d0;
+  --color-cider: #b86b38;
+  --color-olive: #69785a;
+  --color-surface: #ffffff;
+}
+
+@layer base {
+  html {
+    @apply bg-ivory font-sans text-charcoal antialiased;
+  }
+
+  body {
+    @apply min-h-dvh;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-cider;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

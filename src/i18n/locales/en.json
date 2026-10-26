@@ -1,0 +1,234 @@
+{
+  "brand": {
+    "name": "Iturrieta Sagardotegia",
+    "shortName": "Iturrieta",
+    "tagline": "Basque cider house"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "menu": "Menu & Experiences",
+    "reserve": "Reservations",
+    "contact": "Contact",
+    "bookTable": "Book a table",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "main": "Main navigation"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "eu": "Euskara",
+    "es": "Español",
+    "fr": "Français",
+    "ca": "Català"
+  },
+  "footer": {
+    "explore": "Explore",
+    "visit": "Visit",
+    "address": "Basque Country, Spain",
+    "phone": "+34 000 000 000",
+    "hours": "Seasonal hours — details coming soon",
+    "staffLogin": "Staff / Admin login",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Iturrieta Sagardotegia",
+      "trust": "Traditional sagardotegia · Basque Country",
+      "titleLine1": "From apple tree",
+      "titleLine2Lead": "to",
+      "titleBefore": "From apple tree to",
+      "titleAfter": "Txotx.",
+      "rotatingTexts": [
+        "Txotx.",
+        "Tradition.",
+        "The barrel.",
+        "Natural cider."
+      ],
+      "title": "From apple tree to Txotx.",
+      "subheadline": "Natural cider, fire-grilled plates, and long evenings at the Basque cider house table.",
+      "description": "Natural cider, fire-grilled plates, and the txotx ritual — a Basque sagardotegia experience rooted in orchard seasons and long tables shared with friends.",
+      "primaryCta": "Book a table",
+      "secondaryCta": "Discover more",
+      "slides": {
+        "farmhouse": "Farmhouse and valley views near the cider house",
+        "interior": "Traditional dining hall with cider barrels",
+        "terrace": "Stone caserío and outdoor terrace",
+        "harvest": "Apple harvest in the orchard",
+        "outdoor": "Outdoor terrace with mountain views"
+      }
+    },
+    "about": {
+      "title": "A family project in the heart of the Basque countryside",
+      "body": "Iturrieta Sagardotegia grows from a simple idea: keep the sagardotegia spirit alive — honest food, natural cider poured from the barrel, and a welcoming place shaped by the land and the people who tend it.",
+      "stat1": { "value": "Natural", "label": "Cider from local apples" },
+      "stat2": { "value": "Seasonal", "label": "Menu through the year" },
+      "stat3": { "value": "Txotx", "label": "Barrel-side tradition" },
+      "link": "Read more about us",
+      "imageAlt": "Traditional Basque stone caserío"
+    },
+    "menu": {
+      "eyebrow": "Sagardotegia menu",
+      "title": "Cider house menu",
+      "price": "Menu — price on request",
+      "priceNote": "Final pricing and seasonal dishes will be confirmed before launch.",
+      "item1": {
+        "name": "Cod omelette",
+        "description": "Classic starter — details to be verified for the live menu."
+      },
+      "item2": {
+        "name": "Grilled cod",
+        "description": "Traditional sagardotegia fish course with seasonal sides."
+      },
+      "item3": {
+        "name": "T-bone steak",
+        "description": "Fire-grilled centerpiece, shared at the long table."
+      },
+      "item4": {
+        "name": "Local cheese & quince",
+        "description": "Simple closing plate paired with natural cider."
+      },
+      "item5": {
+        "name": "Natural cider",
+        "description": "Unlimited pours from the barrel during txotx — service style to be confirmed."
+      },
+      "link": "See full menu & experiences"
+    },
+    "cider": {
+      "title": "From our apple, natural cider",
+      "body": "Each season begins in the orchard. Apples are pressed, fermented, and cared for until the cellar is ready to welcome guests for txotx — the moment cider meets the glass straight from the barrel.",
+      "stat1": { "value": "100%", "label": "Natural fermentation" },
+      "stat2": { "value": "Local", "label": "Apple varieties" },
+      "stat3": { "value": "Txotx", "label": "Direct from barrel" },
+      "cta": "Explore cider & menu",
+      "imageAlt": "Fresh apples for cider production"
+    },
+    "txotx": {
+      "title": "Txotx!",
+      "description": "Gather at the barrel, fill your glass, and take your place at the table — the heart of every sagardotegia evening.",
+      "cta": "Book a table"
+    },
+    "music": {
+      "eyebrow": "Evenings at the house",
+      "title": "Live music at the cider house",
+      "body": "On selected dates, local musicians join the dining hall for an informal soundtrack to the meal. Full calendar coming soon.",
+      "schedule1": "Seasonal programme — dates to be announced",
+      "schedule2": "Follow our contact page for updates",
+      "imageAlt": "Guests in the cider house dining hall"
+    },
+    "production": {
+      "title": "Discover how cider is born",
+      "intro": "From blossom to barrel, cider making follows the rhythm of the orchard. These steps outline the process — final tour content will be added later.",
+      "step1": {
+        "title": "Harvest",
+        "body": "Apples are picked at maturity across the orchard rows."
+      },
+      "step2": {
+        "title": "Press & ferment",
+        "body": "Juice is pressed and left to ferment naturally with time and care."
+      },
+      "step3": {
+        "title": "Cellar rest",
+        "body": "Cider rests in the cellar until it reaches the right character for txotx."
+      },
+      "step4": {
+        "title": "Txotx service",
+        "body": "Guests visit the barrel as hosts open each kupela for the season."
+      },
+      "link": "Learn about our story",
+      "imageAlt": "Apple harvest in the orchard"
+    },
+    "location": {
+      "title": "Among the mountains, close to Vitoria-Gasteiz",
+      "description": "The cider house sits in a green valley setting — exact directions and travel times will be published on the contact page.",
+      "cta": "Contact & directions"
+    }
+  },
+  "aboutPage": {
+    "hero": {
+      "eyebrow": "Nortzuk garen",
+      "title": "About us",
+      "lead": "A family farming project in the Aramaio valley, devoted to natural organic cider.",
+      "breadcrumbLabel": "Breadcrumb",
+      "breadcrumbHome": "Home",
+      "breadcrumbCurrent": "About",
+      "imageAlt": "Iturrieta kitchen in full service"
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "From Vitoria to Aramaio, since 1997.",
+      "p1": "Iturrieta is a family farming and livestock project. In 1997 we moved from Vitoria to this beautiful farmhouse in Aramaio and turned the cattle and sheep stables into a cider house.",
+      "p2": "It opened on 25 July 1998, St. James's Day. We planted 600 apple trees at first and today tend around 1,400, mixing Basque and Asturian varieties.",
+      "p3": "After more than 20 years in the cider world, we now make certified natural organic cider.",
+      "imageAlt": "Iturrieta farmhouse",
+      "imageTag": "The Iturrieta farmhouse"
+    },
+    "valley": {
+      "eyebrow": "Non gauden · Where we are",
+      "title": "The Aramaio valley.",
+      "p1": "The Aramaio valley —also called \"Suiza Txiki\" (little Switzerland)— lies in northern Álava, next to Bizkaia and Gipuzkoa (Debagoiena), and is part of the Gorbeialdea cuadrilla.",
+      "p2": "Surrounded by mountains such as Orixol, Anboto and Udalaitz to the north, and Murugain, Kurtzebarri, Aloña and Aizkorri to the east. At 485 m, with an Atlantic climate and mild temperatures.",
+      "imageAlt": "The Aramaio valley",
+      "imageTag": "Aramaio · \"Suiza Txiki\"",
+      "cta": "How to get here"
+    },
+    "harvest": {
+      "eyebrow": "Sagar bilketa · The harvest",
+      "title": "How the 2026 harvest is going.",
+      "p1": "The trees have borne little fruit this year: the apple tree is biennial and it was its year to rest. On top of that, two storms over Aramaio brought a lot of apples down, so we expect a smaller harvest than last year.",
+      "p2": "We start picking around <strong>10 September</strong>, well ahead of the usual date because of the heat. Even so, we expect a good cider.",
+      "updated": "Updated September 2026",
+      "imageAlt": "Aramaio apple",
+      "imageTag": "Aramaio"
+    },
+    "kupela": {
+      "eyebrow": "Kupelan · In the barrel",
+      "text": "The cider fermenting, a few weeks after the harvest."
+    },
+    "production": {
+      "eyebrow": "Zer ekoizten dugu · What we produce",
+      "title": "Cider and juice, natural and organic",
+      "lead": "Our cider and apple juice are fully natural and organic, made with apples from our own orchards.",
+      "row1": {
+        "title": "Healthy apple trees",
+        "body": "Sunny, well-ventilated orchards with diverse varieties, cared for constantly under the advice of specialist technicians."
+      },
+      "row2": {
+        "title": "Pruning and care",
+        "body": "Pruning in winter and summer (November to March and August), blossoming around April and harvest from October to mid-November."
+      },
+      "row3": {
+        "title": "Our own products",
+        "body": "Organic cider and juice, as well as apple vinegar and apple cava, made at the farmhouse."
+      },
+      "gallery": {
+        "apples": "Cider, juice and apples from Iturrieta",
+        "harvest": "Harvest crates in the orchard",
+        "cellar": "Cider barrels in the dining hall",
+        "terrace": "Terrace and valley views at Iturrieta"
+      },
+      "link": "More about the process"
+    },
+    "cta": {
+      "eyebrow": "Plan your visit",
+      "title": "Come and meet us where cider is made",
+      "body": "Book your table or a guided visit and experience Basque cider from its origin.",
+      "button": "Book a table"
+    }
+  },
+  "placeholder": {
+    "comingSoon": "This section is being prepared. Content and features will arrive in a later milestone.",
+    "backHome": "Back to home"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you requested is not here. Try the navigation or return home."
+  },
+  "staff": {
+    "loginTitle": "Staff login",
+    "loginDescription": "Authentication will connect to the backend in a future milestone. This page is a placeholder.",
+    "dashboardTitle": "Staff area",
+    "dashboardDescription": "Protected staff tools will appear here once authentication is implemented."
+  }
+}

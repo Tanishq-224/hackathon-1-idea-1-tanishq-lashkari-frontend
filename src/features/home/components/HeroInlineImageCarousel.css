@@ -1,0 +1,15 @@
+.hero-inline-slide {
+  transition: opacity 1600ms ease-in-out;
+  will-change: opacity;
+}
+
+.hero-inline-frame {
+  background: rgb(30 33 29 / 0.35);
+  box-shadow: 0 8px 32px rgb(30 33 29 / 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-inline-slide {
+    transition-duration: 0ms;
+  }
+}

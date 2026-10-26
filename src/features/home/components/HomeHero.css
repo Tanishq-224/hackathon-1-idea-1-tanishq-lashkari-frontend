@@ -1,0 +1,23 @@
+.hero-section {
+  background-color: #1e211d;
+}
+
+.hero-overlay-theme {
+  background-color: rgb(30 33 29 / 0.38);
+}
+
+.hero-overlay-vignette {
+  background: radial-gradient(
+    ellipse at center,
+    rgb(105 120 90 / 0.08) 0%,
+    rgb(30 33 29 / 0.28) 100%
+  );
+}
+
+.hero-accent-glow {
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgb(184 107 56 / 0.12) 0%,
+    transparent 55%
+  );
+}
