@@ -1,10 +1,30 @@
-.public-page-hero {
+/**
+ * @description Bricolage Grotesque for primary hero headings (all public heroes).
+ */
+.hero-section h1,
+.inner-page-hero h1,
+.public-page-hero__title,
+.booking-hero__title {
+  font-family: var(--font-display);
+}
+
+/**
+ * @description Shared inner-page hero height (matches About page).
+ */
+.inner-page-hero,
+.public-page-hero,
+.booking-hero {
   position: relative;
   display: flex;
-  min-height: min(72vh, 640px);
-  align-items: flex-end;
+  min-height: min(78vh, 720px);
   overflow: hidden;
-  padding-block: clamp(5.5rem, 14vh, 7rem) clamp(2.5rem, 6vh, 3.5rem);
+}
+
+.inner-page-hero,
+.public-page-hero {
+  align-items: flex-end;
+  padding-top: clamp(7rem, 14vh, 8rem);
+  padding-bottom: clamp(3.5rem, 6vh, 5rem);
 }
 
 .public-page-hero__image {

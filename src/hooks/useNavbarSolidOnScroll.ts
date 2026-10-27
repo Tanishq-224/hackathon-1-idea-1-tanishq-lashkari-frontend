@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 const SCROLL_THRESHOLD_PX = 64;
 
 /**
- * @description Returns true after the user scrolls past the threshold (home navbar solid bg).
- * @param {boolean} enabled - When false, always returns true (non-home pages).
+ * @description Returns true after the user scrolls past the threshold (transparent nav over hero → solid).
+ * @param {boolean} enabled - When false, always returns true (solid nav immediately).
  * @returns {boolean} Whether the navbar should use solid theme styling.
  */
 export function useNavbarSolidOnScroll(enabled: boolean): boolean {

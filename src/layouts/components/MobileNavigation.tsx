@@ -80,7 +80,6 @@ export function MobileNavigation({ open, onClose }: MobileNavigationProps) {
                 <li key={item.to}>
                   <NavLink
                     to={item.to}
-                    end={item.to === '/'}
                     onClick={onClose}
                     className={({ isActive }) =>
                       [

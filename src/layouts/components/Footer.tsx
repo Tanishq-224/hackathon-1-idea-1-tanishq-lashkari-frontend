@@ -77,12 +77,20 @@ export function Footer() {
             </p>
           </StaggerFadeItem>
           <StaggerFadeItem>
-            <Link
-              to="/staff/login"
-              className="text-sm text-ivory/60 transition-colors hover:text-ivory"
-            >
-              {t('footer.staffLogin')}
-            </Link>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <Link
+                to="/staff/login"
+                className="text-sm text-ivory/70 transition-colors hover:text-cider"
+              >
+                {t('footer.login')}
+              </Link>
+              <Link
+                to="/staff/signup"
+                className="text-sm text-ivory/70 transition-colors hover:text-cider"
+              >
+                {t('footer.signup')}
+              </Link>
+            </div>
           </StaggerFadeItem>
         </StaggerFade>
       </Container>

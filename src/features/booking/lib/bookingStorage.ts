@@ -96,3 +96,31 @@ export function cancelBooking(
   writeAll(all);
   return updated;
 }
+
+/**
+ * @description Retrieves table IDs that have an active (non-cancelled) booking on a given date and time.
+ * @param {string} date - Booking date (YYYY-MM-DD).
+ * @param {string} [time] - Optional booking time (HH:mm).
+ * @returns {Set<string>} Set of booked table IDs.
+ */
+export function getBookedTableIds(date: string, time?: string): Set<string> {
+  const all = readAll();
+  const bookedIds = new Set<string>();
+
+  for (const item of all) {
+    if (item.status === 'cancelled') {
+      continue;
+    }
+    if (item.date !== date) {
+      continue;
+    }
+    if (time && item.time && item.time !== time) {
+      continue;
+    }
+    if (item.tableId) {
+      bookedIds.add(item.tableId);
+    }
+  }
+
+  return bookedIds;
+}

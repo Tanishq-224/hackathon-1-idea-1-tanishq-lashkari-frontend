@@ -8,6 +8,7 @@ import {
 } from '../../../components/animations/StaggerFade';
 import { Container } from '../../../components/ui/Container';
 import { homeSectionImages } from '../data/homeImages';
+import { HomeSectionMedia } from './HomeSectionMedia';
 
 /**
  * @description About the cider house with stats and caserío photography.
@@ -20,30 +21,28 @@ export function AboutFamilySection() {
   return (
     <section className="bg-ivory py-16 md:py-24">
       <Container>
-        <StaggerFade className="grid items-center gap-12 lg:grid-cols-2">
+        <StaggerFade className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
           <StaggerFadeItem>
             <h2 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-semibold leading-tight text-charcoal">
               {t('home.about.title')}
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-charcoal/85">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-charcoal/85">
               {t('home.about.body')}
             </p>
-            <dl className="mt-8 grid gap-6 sm:grid-cols-3">
-              <StaggerFade className="contents">
-                {stats.map((key) => (
-                  <StaggerFadeItem key={key}>
-                    <div>
-                      <dt className="font-display text-2xl font-semibold text-cider">
-                        {t(`home.about.${key}.value`)}
-                      </dt>
-                      <dd className="mt-1 text-sm text-charcoal/75">
-                        {t(`home.about.${key}.label`)}
-                      </dd>
-                    </div>
-                  </StaggerFadeItem>
-                ))}
-              </StaggerFade>
-            </dl>
+            <StaggerFade className="mt-8 grid gap-4 sm:grid-cols-3" staggerChildren={0.06}>
+              {stats.map((key) => (
+                <StaggerFadeItem key={key}>
+                  <div>
+                    <p className="font-display text-2xl font-semibold text-cider">
+                      {t(`home.about.${key}.value`)}
+                    </p>
+                    <p className="mt-1 text-sm text-charcoal/75">
+                      {t(`home.about.${key}.label`)}
+                    </p>
+                  </div>
+                </StaggerFadeItem>
+              ))}
+            </StaggerFade>
             <Link
               to="/about"
               className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-cider hover:underline"
@@ -53,11 +52,11 @@ export function AboutFamilySection() {
             </Link>
           </StaggerFadeItem>
           <StaggerFadeItem>
-            <img
+            <HomeSectionMedia
               src={homeSectionImages.about}
               alt={t('home.about.imageAlt')}
-              className="aspect-[4/5] w-full rounded-sm object-cover"
-              loading="lazy"
+              caption={t('home.about.imageCaption')}
+              align="right"
             />
           </StaggerFadeItem>
         </StaggerFade>

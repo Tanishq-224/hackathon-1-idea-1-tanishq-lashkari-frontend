@@ -66,7 +66,8 @@
       "stat2": { "value": "Estacional", "label": "Menú durante el año" },
       "stat3": { "value": "Txotx", "label": "Tradición del barril" },
       "link": "Leer más sobre nosotros",
-      "imageAlt": "Caserío vasco tradicional de piedra"
+      "imageAlt": "Caserío vasco tradicional de piedra",
+      "imageCaption": "Aramaio · Álava"
     },
     "menu": {
       "eyebrow": "Menú de sagardotegia",
@@ -143,6 +144,157 @@
       "title": "Entre montañas, cerca de Vitoria-Gasteiz",
       "description": "La sidrería se encuentra en un valle verde — direcciones y tiempos de viaje en la página de contacto.",
       "cta": "Contacto y cómo llegar"
+    }
+  },
+  "bookingPage": {
+    "hero": {
+      "eyebrow": "Reservas · Sagardotegia",
+      "title": "Reserva tu mesa",
+      "lead": "Reserva tu mesa y disfruta de una auténtica experiencia de sidrería vasca.",
+      "breadcrumbLabel": "Miga de pan",
+      "breadcrumbCurrent": "Reservas",
+      "imageAlt": "Interior de la sidrería con kupelas y mesas de madera",
+      "badgeRealtime": "Disponibilidad en tiempo real",
+      "badgeSelectTable": "Elige tu mesa favorita",
+      "badgeInstant": "Confirmación inmediata"
+    },
+    "steps": {
+      "progressLabel": "Progreso de reserva",
+      "step1": "Fecha y comensales",
+      "step2": "Zona y mesa",
+      "step3": "Tus datos",
+      "step4": "Confirmación"
+    },
+    "section1": {
+      "title": "1. Selecciona fecha, hora y comensales",
+      "subtitle": "Elige la fecha, turno y número de comensales para ver mesas disponibles.",
+      "checkAvailability": "Comprobar disponibilidad"
+    },
+    "section2": {
+      "title": "2. Elige una zona",
+      "subtitle": "Cada zona ofrece una atmósfera única. Selecciona la que prefieras."
+    },
+    "areas": {
+      "restaurant": "Comedor interior",
+      "restaurantDesc": "Comedor tradicional de sidrería",
+      "open-space": "Espacio al aire libre",
+      "open-spaceDesc": "Mesas exteriores rodeadas de naturaleza",
+      "roof-terrace": "Terraza panorámica",
+      "roof-terraceDesc": "Vistas despejadas al valle de Aramaio",
+      "tablesCount": "{{count}} mesas",
+      "seatsRange": "{{range}} plazas"
+    },
+    "section3": {
+      "title": "3. Selecciona una mesa",
+      "subtitle": "Mesas disponibles para el {{date}} a las {{time}} • {{guests}} personas • {{area}}",
+      "loading": "Consultando disponibilidad de mesas…",
+      "emptyTitle": "No hay mesas disponibles",
+      "emptyDesc": "No hay mesas disponibles en esta zona para {{guests}} comensales a las {{time}}. Prueba a modificar el número de comensales, otra zona u otro horario.",
+      "changeFilters": "Modificar selección",
+      "gridLabel": "Mesas del restaurante",
+      "fixtureNotice": "Vista previa de desarrollo: Las mesas reflejan la configuración de la sidrería. Las actualizaciones en vivo por Socket.IO se conectarán en la siguiente fase."
+    },
+    "legend": {
+      "label": "Leyenda de estado",
+      "available": "Disponible",
+      "selected": "Seleccionada",
+      "booked": "Ocupada",
+      "unavailable": "No disponible"
+    },
+    "tableCard": {
+      "seats": "{{count}} plazas"
+    },
+    "section4": {
+      "title": "4. Tus datos",
+      "subtitle": "Confirma la mesa seleccionada e introduce tus datos de contacto.",
+      "selectedTableLabel": "Mesa seleccionada",
+      "noTableSelected": "Por favor, selecciona una mesa disponible para continuar.",
+      "phoneNote": "Confirmamos cada reserva por teléfono o WhatsApp para garantizar tu mesa y atender peticiones especiales."
+    },
+    "confirmation": {
+      "title": "¡Reserva recibida!",
+      "subtitle": "Tu mesa ha sido reservada. Te hemos enviado un correo de confirmación a {{email}} y te llamaremos para reconfirmar.",
+      "referenceLabel": "Código de reserva",
+      "copyRef": "Copiar código",
+      "copied": "¡Copiado!",
+      "detailsHeading": "Resumen de la reserva",
+      "bookAnother": "Hacer otra reserva"
+    },
+    "intro": {
+      "title": "¿Grupos grandes o eventos especiales?",
+      "body": "Para celebraciones, comidas de empresa o autobuses, consúltanos directamente.",
+      "hours": "Comidas jue–dom 13:00–16:00. Cenas y visitas lun–mié con cita previa.",
+      "call": "Llamar al {{phone}}",
+      "whatsapp": "WhatsApp"
+    },
+    "tabs": {
+      "label": "Acciones de reserva",
+      "book": "Reservar mesa",
+      "manage": "Gestionar reserva"
+    },
+    "form": {
+      "date": "Fecha preferida",
+      "time": "Hora",
+      "guests": "Comensales",
+      "seats": "plazas",
+      "guestSingular": "1 persona",
+      "guestsCount": "{{count}} personas",
+      "selectDate": "Seleccionar fecha",
+      "dateRequired": "Por favor, selecciona una fecha.",
+      "dateInPast": "La fecha debe ser hoy o futura.",
+      "timeRequired": "Por favor, selecciona una hora.",
+      "guestsRequired": "Por favor, indica al menos 1 comensal.",
+      "slot": "Turno",
+      "slotLunch": "Comida (jue–dom)",
+      "slotDinner": "Cena (por encargo)",
+      "busGuests": "Comensales en autobús",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "countryCode": "Prefijo",
+      "notes": "Notas (alergias, celebraciones…)",
+      "notesOptional": "Peticiones especiales (opcional)",
+      "notesPlaceholder": "Mesa junto a kupelas, trona, celiaquía…",
+      "submit": "Enviar solicitud",
+      "confirmBooking": "Confirmar reserva",
+      "submitting": "Confirmando reserva…",
+      "notice": "Guardamos tu solicitud y te llamaremos por teléfono.",
+      "errorRequired": "Por favor, rellena fecha, comensales, nombre, email y teléfono.",
+      "successTitle": "Solicitud recibida",
+      "successBody": "Guarda tu referencia. Nos pondremos en contacto contigo.",
+      "newBooking": "Enviar otra solicitud",
+      "errors": {
+        "selectTable": "Por favor, selecciona una mesa disponible antes de confirmar.",
+        "nameRequired": "Por favor, escribe tu nombre completo.",
+        "emailRequired": "Por favor, escribe tu correo electrónico.",
+        "emailInvalid": "Por favor, escribe un correo válido.",
+        "phoneRequired": "Por favor, escribe tu número de teléfono.",
+        "phoneInvalid": "El teléfono debe tener al menos 6 dígitos."
+      }
+    },
+    "manage": {
+      "reference": "Código de reserva",
+      "email": "Email de la reserva",
+      "lookup": "Buscar reserva",
+      "notFound": "No se encontró ninguna reserva con esa referencia y email.",
+      "foundTitle": "Tu reserva",
+      "status": "Estado",
+      "date": "Fecha",
+      "slot": "Turno",
+      "guests": "Comensales",
+      "busGuests": "Plazas en bus",
+      "cancelRequest": "Solicitar cancelación",
+      "cancelled": "Cancelación registrada — llámanos si cambias de planes.",
+      "phoneNote": "Para cambios con menos de una semana, llámanos directamente."
+    },
+    "status": {
+      "pending": "Pendiente de confirmación",
+      "confirmed": "Confirmada",
+      "cancelled": "Cancelada"
+    },
+    "slots": {
+      "lunch": "Comida (13:00 - 15:00)",
+      "dinner": "Cena (20:00 - 21:00)"
     }
   },
   "placeholder": {

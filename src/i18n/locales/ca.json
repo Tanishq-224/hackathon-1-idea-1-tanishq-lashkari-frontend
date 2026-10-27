@@ -66,7 +66,8 @@
       "stat2": { "value": "Estacional", "label": "Menú al llarg de l’any" },
       "stat3": { "value": "Txotx", "label": "Tradició del barril" },
       "link": "Llegir més sobre nosaltres",
-      "imageAlt": "Caserío basc tradicional de pedra"
+      "imageAlt": "Caserío basc tradicional de pedra",
+      "imageCaption": "Aramaio · Álava"
     },
     "menu": {
       "eyebrow": "Menú sagardotegia",
@@ -143,6 +144,157 @@
       "title": "Entre muntanyes, a prop de Vitoria-Gasteiz",
       "description": "La sidreria es troba en una vall verda — indicacions a la pàgina de contacte.",
       "cta": "Contacte i com arribar"
+    }
+  },
+  "bookingPage": {
+    "hero": {
+      "eyebrow": "Reserves · Sagardotegia",
+      "title": "Reserva la teva taula",
+      "lead": "Reserva taula i gaudeix d'una autèntica experiència de sidreria basca.",
+      "breadcrumbLabel": "Fil d'Ariadna",
+      "breadcrumbCurrent": "Reserves",
+      "imageAlt": "Interior de la sidreria amb bótes i taules de fusta",
+      "badgeRealtime": "Disponibilitat en temps real",
+      "badgeSelectTable": "Tria la teva taula preferida",
+      "badgeInstant": "Confirmació immediata"
+    },
+    "steps": {
+      "progressLabel": "Progrés de la reserva",
+      "step1": "Data i comensals",
+      "step2": "Zona i taula",
+      "step3": "Dades personals",
+      "step4": "Confirmació"
+    },
+    "section1": {
+      "title": "1. Selecciona data, hora i comensals",
+      "subtitle": "Tria la data, torn i nombre de comensals per veure taules disponibles.",
+      "checkAvailability": "Comprovar disponibilitat"
+    },
+    "section2": {
+      "title": "2. Tria una zona",
+      "subtitle": "Cada zona ofereix una atmosfera única. Selecciona la teva preferida."
+    },
+    "areas": {
+      "restaurant": "Menjador interior",
+      "restaurantDesc": "Menjador tradicional de sidreria",
+      "open-space": "Espai a l'aire lliure",
+      "open-spaceDesc": "Taules exteriors envoltades de natura",
+      "roof-terrace": "Terrassa panoràmica",
+      "roof-terraceDesc": "Vistes clares a la vall d'Aramaio",
+      "tablesCount": "{{count}} taules",
+      "seatsRange": "{{range}} places"
+    },
+    "section3": {
+      "title": "3. Selecciona una taula",
+      "subtitle": "Taules disponibles per al {{date}} a les {{time}} • {{guests}} persones • {{area}}",
+      "loading": "Consultant disponibilitat de taules…",
+      "emptyTitle": "Cap taula disponible",
+      "emptyDesc": "No hi ha taules disponibles en aquesta zona per a {{guests}} persones a les {{time}}. Prova amb una altra zona o un altre horari.",
+      "changeFilters": "Modificar selecció",
+      "gridLabel": "Taules del restaurant",
+      "fixtureNotice": "Vista prèvia de desenvolupament: Les taules reflecteixen la configuració de la sidreria. Les actualitzacions en directe amb Socket.IO arribaran a la propera fita."
+    },
+    "legend": {
+      "label": "Llegenda d'estat",
+      "available": "Disponible",
+      "selected": "Seleccionada",
+      "booked": "Ocupada",
+      "unavailable": "No disponible"
+    },
+    "tableCard": {
+      "seats": "{{count}} places"
+    },
+    "section4": {
+      "title": "4. Dades personals",
+      "subtitle": "Confirma la taula seleccionada i introdueix les teves dades de contacte.",
+      "selectedTableLabel": "Taula seleccionada",
+      "noTableSelected": "Si us plau, selecciona una taula disponible per continuar.",
+      "phoneNote": "Confirmem cada reserva per telèfon o WhatsApp per garantir la teva taula."
+    },
+    "confirmation": {
+      "title": "Reserva rebuda!",
+      "subtitle": "La teva taula ha estat reservada. T'hem enviat un correu de confirmació a {{email}} i et trucarem per reconfirmar.",
+      "referenceLabel": "Codi de reserva",
+      "copyRef": "Copiar codi",
+      "copied": "Copiat!",
+      "detailsHeading": "Resum de la reserva",
+      "bookAnother": "Fer una altra reserva"
+    },
+    "intro": {
+      "title": "Grups grans o esdeveniments especials?",
+      "body": "Per a celebracions, dinars d'empresa o autobusos, contacta'ns directament.",
+      "hours": "Dinars dj–dg 13:00–16:00. Sopars i visites dl–dc amb cita prèvia.",
+      "call": "Trucar al {{phone}}",
+      "whatsapp": "WhatsApp"
+    },
+    "tabs": {
+      "label": "Accions de reserva",
+      "book": "Reservar taula",
+      "manage": "Gestionar reserva"
+    },
+    "form": {
+      "date": "Data preferida",
+      "time": "Hora",
+      "guests": "Comensals",
+      "seats": "places",
+      "guestSingular": "1 persona",
+      "guestsCount": "{{count}} persones",
+      "selectDate": "Seleccionar data",
+      "dateRequired": "Si us plau, selecciona una data.",
+      "dateInPast": "La data ha de ser avui o futura.",
+      "timeRequired": "Si us plau, selecciona una hora.",
+      "guestsRequired": "Si us plau, indica almenys 1 comensal.",
+      "slot": "Torn",
+      "slotLunch": "Dinar (dj–dg)",
+      "slotDinner": "Sopar (per encàrrec)",
+      "busGuests": "Comensals en bus",
+      "name": "Nom complet",
+      "email": "Correu electrònic",
+      "phone": "Telèfon",
+      "countryCode": "Prefix",
+      "notes": "Notes (al·lèrgies, celebracions…)",
+      "notesOptional": "Peticions especials (opcional)",
+      "notesPlaceholder": "Taula a prop de kupeles, cadira infantil…",
+      "submit": "Enviar sol·licitud",
+      "confirmBooking": "Confirmar reserva",
+      "submitting": "Confirmant reserva…",
+      "notice": "Darem curs a la teva sol·licitud i et trucarem per telèfon.",
+      "errorRequired": "Si us plau, omple data, comensals, nom, email i telèfon.",
+      "successTitle": "Sol·licitud rebuda",
+      "successBody": "Guarda la referència. Et trucarem ben aviat.",
+      "newBooking": "Enviar una altra sol·licitud",
+      "errors": {
+        "selectTable": "Si us plau, selecciona una taula disponible abans d'enviar.",
+        "nameRequired": "Si us plau, escriu el teu nom complet.",
+        "emailRequired": "Si us plau, escriu el teu correu electrònic.",
+        "emailInvalid": "Si us plau, escriu un correu electrònic vàlid.",
+        "phoneRequired": "Si us plau, escriu el teu número de telèfon.",
+        "phoneInvalid": "El telèfon ha de tenir almenys 6 dígits."
+      }
+    },
+    "manage": {
+      "reference": "Codi de reserva",
+      "email": "Email utilitzat",
+      "lookup": "Cercar reserva",
+      "notFound": "No s'ha trobat cap reserva amb aquesta referència i email.",
+      "foundTitle": "La teva reserva",
+      "status": "Estat",
+      "date": "Data",
+      "slot": "Torn",
+      "guests": "Comensals",
+      "busGuests": "Places en bus",
+      "cancelRequest": "Demanar cancel·lació",
+      "cancelled": "Cancel·lació registrada — truca'ns si canvien els plans.",
+      "phoneNote": "Per a canvis amb menys d'una setmana, truca directament a la sidreria."
+    },
+    "status": {
+      "pending": "Pendent de confirmació",
+      "confirmed": "Confirmada",
+      "cancelled": "Cancel·lada"
+    },
+    "slots": {
+      "lunch": "Dinar (13:00 - 15:00)",
+      "dinner": "Sopar (20:00 - 21:00)"
     }
   },
   "placeholder": {

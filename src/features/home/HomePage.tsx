@@ -13,7 +13,7 @@ import { TxotxBannerSection } from './components/TxotxBannerSection';
  */
 export function HomePage() {
   return (
-    <>
+    <div className="home-page">
       <HomeHero />
       <AboutFamilySection />
       <MenuPreviewSection />
@@ -22,6 +22,6 @@ export function HomePage() {
       <LiveMusicSection />
       <ProductionSection />
       <LocationBannerSection />
-    </>
+    </div>
   );
 }

@@ -7,10 +7,9 @@ export type NavItem = {
 };
 
 /**
- * @description Public site navigation links.
+ * @description Public site navigation links (header and footer explore).
  */
 export const publicNavItems: NavItem[] = [
-  { to: '/', labelKey: 'nav.home' },
   { to: '/about', labelKey: 'nav.about' },
   { to: '/menu', labelKey: 'nav.menu' },
   { to: '/reserve', labelKey: 'nav.reserve' },

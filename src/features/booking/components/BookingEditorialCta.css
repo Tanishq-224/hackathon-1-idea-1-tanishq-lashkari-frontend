@@ -1,0 +1,68 @@
+.booking-editorial-cta {
+  border: 1px solid rgb(30 33 29 / 0.08);
+  border-radius: 1.25rem;
+  background: var(--color-surface);
+  padding: clamp(2rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 2rem);
+  text-align: center;
+}
+
+.booking-editorial-cta__email {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgb(30 33 29 / 0.42);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.booking-editorial-cta__email:hover {
+  color: var(--color-cider);
+}
+
+.booking-editorial-cta__title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 3.8vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.booking-editorial-cta__line {
+  display: block;
+}
+
+.booking-editorial-cta__muted {
+  color: rgb(105 120 90 / 0.4);
+}
+
+.booking-editorial-cta__solid {
+  color: var(--color-charcoal);
+}
+
+.booking-editorial-cta__accent {
+  color: var(--color-cider);
+}
+
+.booking-editorial-cta__actions {
+  margin-top: 1.5rem;
+}
+
+.booking-editorial-cta__btn {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: var(--color-charcoal);
+  padding: 0.65rem 1.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-surface);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.booking-editorial-cta__btn:hover {
+  background: rgb(30 33 29 / 0.9);
+}

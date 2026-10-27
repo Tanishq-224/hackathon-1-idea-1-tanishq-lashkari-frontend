@@ -24,10 +24,7 @@ export function AboutCtaStrip() {
               <p className="about-cta__eyebrow">{t('aboutPage.cta.eyebrow')}</p>
             </StaggerFadeItem>
             <StaggerFadeItem>
-              <h2
-                id="about-cta-heading"
-                className="about-cta__title"
-              >
+              <h2 id="about-cta-heading" className="about-cta__title">
                 {t('aboutPage.cta.title')}
               </h2>
             </StaggerFadeItem>

@@ -1,7 +1,7 @@
 import { ArrowUpRight, Menu } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import { useNavbarSolidOnScroll } from '../../hooks/useNavbarSolidOnScroll';
 import { cn } from '../../lib/cn';
@@ -16,10 +16,8 @@ import './Navbar.css';
  */
 export function Navbar() {
   const { t } = useTranslation();
-  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isHome = location.pathname === '/';
-  const solidNav = useNavbarSolidOnScroll(isHome);
+  const solidNav = useNavbarSolidOnScroll(true);
 
   /**
    * @description Opens the mobile navigation drawer.
@@ -57,7 +55,6 @@ export function Navbar() {
               <li key={item.to} className="pointer-events-auto">
                 <NavLink
                   to={item.to}
-                  end={item.to === '/'}
                   className={({ isActive }) =>
                     cn(
                       'text-sm font-medium text-ivory/85 transition-colors hover:text-ivory',

@@ -18,7 +18,7 @@ export function AboutPageHero() {
   const { t } = useTranslation();
 
   return (
-    <header className="relative flex min-h-[min(78vh,720px)] items-end overflow-hidden pb-14 pt-28 md:pb-20 md:pt-32">
+    <header className="inner-page-hero">
       <AboutHeroParallax
         src={aboutImages.hero}
         alt={t('aboutPage.hero.imageAlt')}

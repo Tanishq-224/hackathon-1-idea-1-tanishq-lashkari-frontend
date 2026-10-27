@@ -7,6 +7,7 @@ import {
 } from '../../../components/animations/StaggerFade';
 import { Container } from '../../../components/ui/Container';
 import { homeSectionImages } from '../data/homeImages';
+import { HomeSectionMedia } from './HomeSectionMedia';
 
 const stepKeys = ['step1', 'step2', 'step3', 'step4'] as const;
 
@@ -20,12 +21,12 @@ export function ProductionSection() {
   return (
     <section className="bg-surface py-16 md:py-24">
       <Container>
-        <StaggerFade className="grid items-center gap-12 lg:grid-cols-2">
+        <StaggerFade className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
           <StaggerFadeItem>
             <h2 className="font-display text-[clamp(1.75rem,4vw,2.5rem)] font-semibold leading-tight">
               {t('home.production.title')}
             </h2>
-            <p className="mt-4 text-charcoal/85">{t('home.production.intro')}</p>
+            <p className="mt-4 max-w-xl text-charcoal/85">{t('home.production.intro')}</p>
             <StaggerFade className="mt-8 space-y-4" staggerChildren={0.07}>
               {stepKeys.map((key, index) => (
                 <StaggerFadeItem key={key}>
@@ -53,11 +54,10 @@ export function ProductionSection() {
             </Link>
           </StaggerFadeItem>
           <StaggerFadeItem>
-            <img
+            <HomeSectionMedia
               src={homeSectionImages.production}
               alt={t('home.production.imageAlt')}
-              className="aspect-[4/5] w-full rounded-sm object-cover"
-              loading="lazy"
+              align="right"
             />
           </StaggerFadeItem>
         </StaggerFade>

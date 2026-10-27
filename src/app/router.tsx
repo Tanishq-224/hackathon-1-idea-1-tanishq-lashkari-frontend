@@ -8,6 +8,7 @@ import { MenuPage } from '../features/menu/MenuPage';
 import { NotFoundPage } from '../features/not-found/NotFoundPage';
 import { StaffDashboardPlaceholder } from '../features/staff/StaffDashboardPlaceholder';
 import { StaffLoginPage } from '../features/staff/StaffLoginPage';
+import { StaffSignupPage } from '../features/staff/StaffSignupPage';
 import { PublicLayout } from '../layouts/PublicLayout';
 
 /**
@@ -26,6 +27,7 @@ export function AppRouter() {
         <Route path="*" element={<NotFoundPage />} />
       </Route>
       <Route path="/staff/login" element={<StaffLoginPage />} />
+      <Route path="/staff/signup" element={<StaffSignupPage />} />
       <Route path="/staff" element={<StaffDashboardPlaceholder />} />
     </Routes>
   );

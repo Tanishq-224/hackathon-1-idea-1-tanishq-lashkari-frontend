@@ -66,7 +66,8 @@
       "stat2": { "value": "Denboraldikoa", "label": "Urteko menua" },
       "stat3": { "value": "Txotx", "label": "Upel ondoko tradizioa" },
       "link": "Gehiago irakurri guri buruz",
-      "imageAlt": "Harrizko euskal baserri tradizionala"
+      "imageAlt": "Harrizko euskal baserri tradizionala",
+      "imageCaption": "Aramaio · Álava"
     },
     "menu": {
       "eyebrow": "Sagardotegi menua",
@@ -143,6 +144,157 @@
       "title": "Mendien artean, Gasteiztik hurbil",
       "description": "Sagardotegia haran berde batean dago — norabideak kontaktu orrian.",
       "cta": "Kontaktua eta norabideak"
+    }
+  },
+  "bookingPage": {
+    "hero": {
+      "eyebrow": "Erreserbak · Sagardotegia",
+      "title": "Erreserbatu zure mahaia",
+      "lead": "Erreserbatu mahaia eta gozatu euskal sagardotegi esperientzia benetakoaz.",
+      "breadcrumbLabel": "Nabigazio bidea",
+      "breadcrumbCurrent": "Erreserbak",
+      "imageAlt": "Sagardotegiko barnealdea kupela eta egurrezko mahaiekin",
+      "badgeRealtime": "Erabilgarritasuna denbora errealean",
+      "badgeSelectTable": "Aukeratu zure mahai gogokoena",
+      "badgeInstant": "Berehalako baieztapena"
+    },
+    "steps": {
+      "progressLabel": "Erreserbaren urratsak",
+      "step1": "Data eta lagunak",
+      "step2": "Eremua eta mahaia",
+      "step3": "Zure datuak",
+      "step4": "Baieztapena"
+    },
+    "section1": {
+      "title": "1. Hautatu data, ordua eta lagun kopurua",
+      "subtitle": "Aukeratu data, txanda eta lagun kopurua mahai erabilgarriak ikusteko.",
+      "checkAvailability": "Erabilgarritasuna egiaztatu"
+    },
+    "section2": {
+      "title": "2. Aukeratu eremua",
+      "subtitle": "Eremu bakoitzak giro berezia eskaintzen du. Hautatu nahiago duzuna."
+    },
+    "areas": {
+      "restaurant": "Jantoki nagusia",
+      "restaurantDesc": "Sagardotegiko jantoki tradizionala",
+      "open-space": "Gune irekia",
+      "open-spaceDesc": "Naturan inguratutako kanpoko mahaiak",
+      "roof-terrace": "Terraza panoramikoa",
+      "roof-terraceDesc": "Aramaioko haranaren ikuspegi garbia",
+      "tablesCount": "{{count}} mahai",
+      "seatsRange": "{{range}} toki"
+    },
+    "section3": {
+      "title": "3. Aukeratu mahaia",
+      "subtitle": "Erabilgarri dauden mahaiak: {{date}} - {{time}} • {{guests}} lagun • {{area}}",
+      "loading": "Mahaien erabilgarritasuna egiaztatzen…",
+      "emptyTitle": "Ez dago mahairik erabilgarri",
+      "emptyDesc": "Eremu honetan ez dago mahai librerik {{guests}} lagunentzat {{time}} orduan. Saiatu beste eremu bat edo beste ordu bat aukeratzen.",
+      "changeFilters": "Hautapena aldatu",
+      "gridLabel": "Jantokiko mahaiak",
+      "fixtureNotice": "Garapen aurrebista: Mahaiek sagardotegiaren antolaketa islatzen dute. Socket.IO bidezko zuzeneko eguneraketak hurrengo mugarrian konektatuko dira."
+    },
+    "legend": {
+      "label": "Egoera legenda",
+      "available": "Libre",
+      "selected": "Hautatua",
+      "booked": "Hartua",
+      "unavailable": "Ez erabilgarri"
+    },
+    "tableCard": {
+      "seats": "{{count}} toki"
+    },
+    "section4": {
+      "title": "4. Zure datuak",
+      "subtitle": "Mesedez, baieztatu hautatutako mahaia eta eman zure kontaktu datuak.",
+      "selectedTableLabel": "Hautatutako mahaia",
+      "noTableSelected": "Mesedez, aukeratu goian mahai libre bat jarraitzeko.",
+      "phoneNote": "Erreserba guztiak telefonoz edo WhatsAppez baieztatzen ditugu mahaia bermatzeko."
+    },
+    "confirmation": {
+      "title": "Erreserba jasoa!",
+      "subtitle": "Zure mahaia erreserbatu da. Baieztapen mezu bat bidali dugu {{email}} helbidera eta telefonoz deituko dizugu.",
+      "referenceLabel": "Erreserba kodea",
+      "copyRef": "Kodea kopiatu",
+      "copied": "Kopiatua!",
+      "detailsHeading": "Erreserbaren laburpena",
+      "bookAnother": "Beste erreserba bat egin"
+    },
+    "intro": {
+      "title": "Talde handiak edo ospakizunak?",
+      "body": "Bazkari bereziak, autobusak edo ospakizunetarako, jar zaitez gurekin harremanetan zuzenean.",
+      "hours": "Bazkariak og–ig 13:00–16:00. Afariak eta al–az bisitak hitzorduz.",
+      "call": "Deitu {{phone}}",
+      "whatsapp": "WhatsApp"
+    },
+    "tabs": {
+      "label": "Erreserba aukerak",
+      "book": "Mahaia erreserbatu",
+      "manage": "Kudeatu erreserba"
+    },
+    "form": {
+      "date": "Nahiago duzun data",
+      "time": "Ordua",
+      "guests": "Lagun kopurua",
+      "seats": "toki",
+      "guestSingular": "Lagun 1",
+      "guestsCount": "{{count}} lagun",
+      "selectDate": "Aukeratu data",
+      "dateRequired": "Mesedez, hautatu data bat.",
+      "dateInPast": "Datak gaurkoa edo etorkizunekoa izan behar du.",
+      "timeRequired": "Mesedez, hautatu ordua.",
+      "guestsRequired": "Mesedez, adierazi gutxienez lagun 1.",
+      "slot": "Txanda",
+      "slotLunch": "Bazkaria (og–ig)",
+      "slotDinner": "Afaria (hitzorduz)",
+      "busGuests": "Autobusean datozen lagunak",
+      "name": "Izen-abizenak",
+      "email": "Posta elektronikoa",
+      "phone": "Telefonoa",
+      "countryCode": "Aurrezenbakia",
+      "notes": "Oharrak (alergiak, ospakizunak…)",
+      "notesOptional": "Eskaera bereziak (aukerakoa)",
+      "notesPlaceholder": "Kupela ondoko mahaia, haur-aulkia…",
+      "submit": "Eskaera bidali",
+      "confirmBooking": "Erreserba baieztatu",
+      "submitting": "Erreserba baieztatzen…",
+      "notice": "Zure eskaera gorde dugu eta telefonoz deituko dizugu.",
+      "errorRequired": "Mesedez, bete data, lagunak, izena, posta eta telefonoa.",
+      "successTitle": "Eskaera jaso da",
+      "successBody": "Gorde erreferentzia. Laster jarriko gara zurekin harremanetan.",
+      "newBooking": "Beste eskaera bat bidali",
+      "errors": {
+        "selectTable": "Mesedez, aukeratu mahai libre bat bidali aurretik.",
+        "nameRequired": "Mesedez, idatzi zure izen-abizenak.",
+        "emailRequired": "Mesedez, idatzi zure posta elektronikoa.",
+        "emailInvalid": "Mesedez, idatzi baliozko posta helbide bat.",
+        "phoneRequired": "Mesedez, idatzi zure telefono zenbakia.",
+        "phoneInvalid": "Telefonoak gutxienez 6 zifra izan behar ditu."
+      }
+    },
+    "manage": {
+      "reference": "Erreserba kodea",
+      "email": "Erreserbako posta",
+      "lookup": "Erreserba bilatu",
+      "notFound": "Ez da erreserbarik aurkitu datu horiekin.",
+      "foundTitle": "Zure erreserba",
+      "status": "Egoera",
+      "date": "Data",
+      "slot": "Txanda",
+      "guests": "Lagun kopurua",
+      "busGuests": "Autobus tokiak",
+      "cancelRequest": "Ezeztapena eskatu",
+      "cancelled": "Ezeztapena erregistratuta — deitu aldaketarik balego.",
+      "phoneNote": "Astebete baino lehenagoko aldaketetarako, deitu sagardotegira."
+    },
+    "status": {
+      "pending": "Baieztatzeko",
+      "confirmed": "Baieztatuta",
+      "cancelled": "Ezeztatuta"
+    },
+    "slots": {
+      "lunch": "Bazkaria (13:00 - 15:00)",
+      "dinner": "Afaria (20:00 - 21:00)"
     }
   },
   "placeholder": {

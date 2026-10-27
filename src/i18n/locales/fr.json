@@ -66,7 +66,8 @@
       "stat2": { "value": "Saisonnier", "label": "Menu tout au long de l’année" },
       "stat3": { "value": "Txotx", "label": "Tradition du fût" },
       "link": "En savoir plus sur nous",
-      "imageAlt": "Caserío basque traditionnel en pierre"
+      "imageAlt": "Caserío basque traditionnel en pierre",
+      "imageCaption": "Aramaio · Álava"
     },
     "menu": {
       "eyebrow": "Menu sagardotegia",
@@ -143,6 +144,157 @@
       "title": "Entre les montagnes, près de Vitoria-Gasteiz",
       "description": "La cidrerie se situe dans une vallée verdoyante — itinéraire sur la page contact.",
       "cta": "Contact et itinéraire"
+    }
+  },
+  "bookingPage": {
+    "hero": {
+      "eyebrow": "Réservations · Sagardotegia",
+      "title": "Réservez votre table",
+      "lead": "Réservez votre table et profitez d'une expérience authentique de cidrerie basque.",
+      "breadcrumbLabel": "Fil d'Ariane",
+      "breadcrumbCurrent": "Réservations",
+      "imageAlt": "Intérieur de la cidrerie avec tonneaux et tables en bois",
+      "badgeRealtime": "Disponibilité en temps réel",
+      "badgeSelectTable": "Choisissez votre table préférée",
+      "badgeInstant": "Confirmation immédiate"
+    },
+    "steps": {
+      "progressLabel": "Progression de la réservation",
+      "step1": "Date et convives",
+      "step2": "Espace et table",
+      "step3": "Vos coordonnées",
+      "step4": "Confirmation"
+    },
+    "section1": {
+      "title": "1. Choisissez la date, l'heure et les convives",
+      "subtitle": "Sélectionnez votre date, service et nombre de personnes pour afficher les tables disponibles.",
+      "checkAvailability": "Vérifier la disponibilité"
+    },
+    "section2": {
+      "title": "2. Choisissez un espace",
+      "subtitle": "Chaque espace offre une atmosphère unique. Sélectionnez votre préféré."
+    },
+    "areas": {
+      "restaurant": "Salle intérieure",
+      "restaurantDesc": "Salle à manger traditionnelle de cidrerie",
+      "open-space": "Espace plein air",
+      "open-spaceDesc": "Tables extérieures au cœur de la nature",
+      "roof-terrace": "Terrasse panoramique",
+      "roof-terraceDesc": "Vue dégagée sur la vallée d'Aramaio",
+      "tablesCount": "{{count}} tables",
+      "seatsRange": "{{range}} places"
+    },
+    "section3": {
+      "title": "3. Choisissez une table",
+      "subtitle": "Tables disponibles pour le {{date}} à {{time}} • {{guests}} personnes • {{area}}",
+      "loading": "Vérification des disponibilités…",
+      "emptyTitle": "Aucune table disponible",
+      "emptyDesc": "Aucune table n'est disponible dans cet espace pour {{guests}} personnes à {{time}}. Essayez de modifier le nombre de convives, l'espace ou l'horaire.",
+      "changeFilters": "Modifier les critères",
+      "gridLabel": "Tables du restaurant",
+      "fixtureNotice": "Aperçu de développement : Les tables reflètent la configuration de la cidrerie. Les mises à jour en direct via Socket.IO seront connectées lors de la prochaine étape."
+    },
+    "legend": {
+      "label": "Légende des statuts",
+      "available": "Disponible",
+      "selected": "Sélectionnée",
+      "booked": "Réservée",
+      "unavailable": "Non disponible"
+    },
+    "tableCard": {
+      "seats": "{{count}} places"
+    },
+    "section4": {
+      "title": "4. Vos coordonnées",
+      "subtitle": "Veuillez confirmer la table sélectionnée et renseigner vos coordonnées.",
+      "selectedTableLabel": "Table sélectionnée",
+      "noTableSelected": "Veuillez choisir une table disponible ci-dessus pour continuer.",
+      "phoneNote": "Nous confirmons chaque réservation par téléphone ou WhatsApp pour garantir votre table."
+    },
+    "confirmation": {
+      "title": "Réservation reçue !",
+      "subtitle": "Votre table a été réservée. Un email de confirmation a été envoyé à {{email}} et nous vous appellerons pour finaliser les détails.",
+      "referenceLabel": "Référence de réservation",
+      "copyRef": "Copier la référence",
+      "copied": "Copié !",
+      "detailsHeading": "Récapitulatif de la réservation",
+      "bookAnother": "Faire une autre réservation"
+    },
+    "intro": {
+      "title": "Grandes tablées ou événements spéciaux ?",
+      "body": "Pour les fêtes, repas de groupe ou navettes de bus, n'hésitez pas à contacter la cidrerie directement.",
+      "hours": "Déjeuner jeu–dim 13h–16h. Dîners et visites lun–mer sur réservation.",
+      "call": "Appeler le {{phone}}",
+      "whatsapp": "WhatsApp"
+    },
+    "tabs": {
+      "label": "Actions de réservation",
+      "book": "Réserver une table",
+      "manage": "Gérer ma réservation"
+    },
+    "form": {
+      "date": "Date souhaitée",
+      "time": "Heure",
+      "guests": "Convives",
+      "seats": "places",
+      "guestSingular": "1 personne",
+      "guestsCount": "{{count}} personnes",
+      "selectDate": "Choisir une date",
+      "dateRequired": "Veuillez choisir une date.",
+      "dateInPast": "La date doit être aujourd'hui ou dans le futur.",
+      "timeRequired": "Veuillez choisir une heure.",
+      "guestsRequired": "Veuillez indiquer au moins 1 personne.",
+      "slot": "Service",
+      "slotLunch": "Déjeuner (jeu–dim)",
+      "slotDinner": "Dîner (sur demande)",
+      "busGuests": "Passagers bus",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "countryCode": "Indicatif",
+      "notes": "Remarques (allergies, célébration…)",
+      "notesOptional": "Demandes particulières (facultatif)",
+      "notesPlaceholder": "Table près des tonneaux, chaise haute…",
+      "submit": "Envoyer la demande",
+      "confirmBooking": "Confirmer la réservation",
+      "submitting": "Confirmation en cours…",
+      "notice": "Nous enregistrons votre demande et nous vous contacterons par téléphone.",
+      "errorRequired": "Veuillez remplir la date, les convives, le nom, l'email et le téléphone.",
+      "successTitle": "Demande reçue",
+      "successBody": "Conservez votre référence. Nous vous contacterons rapidement.",
+      "newBooking": "Envoyer une autre demande",
+      "errors": {
+        "selectTable": "Veuillez choisir une table disponible avant de confirmer.",
+        "nameRequired": "Veuillez renseigner votre nom complet.",
+        "emailRequired": "Veuillez renseigner votre adresse email.",
+        "emailInvalid": "Veuillez renseigner une adresse email valide.",
+        "phoneRequired": "Veuillez renseigner votre numéro de téléphone.",
+        "phoneInvalid": "Le numéro de téléphone doit comporter au moins 6 chiffres."
+      }
+    },
+    "manage": {
+      "reference": "Référence de réservation",
+      "email": "Email utilisé",
+      "lookup": "Rechercher",
+      "notFound": "Aucune réservation trouvée pour cette référence et cet email.",
+      "foundTitle": "Votre réservation",
+      "status": "Statut",
+      "date": "Date",
+      "slot": "Service",
+      "guests": "Convives",
+      "busGuests": "Passagers bus",
+      "cancelRequest": "Demander l'annulation",
+      "cancelled": "Annulation enregistrée — contactez-nous en cas de changement.",
+      "phoneNote": "Pour toute modification à moins d'une semaine, merci d'appeler directement la cidrerie."
+    },
+    "status": {
+      "pending": "En attente de confirmation",
+      "confirmed": "Confirmée",
+      "cancelled": "Annulée"
+    },
+    "slots": {
+      "lunch": "Déjeuner (13:00 - 15:00)",
+      "dinner": "Dîner (20:00 - 21:00)"
     }
   },
   "placeholder": {

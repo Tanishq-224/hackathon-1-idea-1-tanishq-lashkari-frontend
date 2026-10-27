@@ -29,7 +29,8 @@
     "address": "Arraga auzoa, 2 · 01169 Aramaio (Álava)",
     "phone": "+34 685 72 15 93",
     "hours": "Thu–Sun 13:00–16:00 · dinners by arrangement",
-    "staffLogin": "Staff / Admin login",
+    "login": "Log in",
+    "signup": "Sign up",
     "rights": "All rights reserved."
   },
   "home": {
@@ -66,7 +67,8 @@
       "stat2": { "value": "Seasonal", "label": "Menu through the year" },
       "stat3": { "value": "Txotx", "label": "Barrel-side tradition" },
       "link": "Read more about us",
-      "imageAlt": "Traditional Basque stone caserío"
+      "imageAlt": "Traditional Basque stone caserío",
+      "imageCaption": "Aramaio · Álava"
     },
     "menu": {
       "eyebrow": "Sagardotegia menu",
@@ -364,41 +366,140 @@
   "bookingPage": {
     "hero": {
       "eyebrow": "Erreserbak · Bookings",
-      "title": "Book your table",
-      "lead": "Send a request online — we confirm every booking by phone, just like at the cider house.",
+      "title": "Book Your Table",
+      "lead": "Reserve your place at the long table — natural cider, fire-grilled plates, and the warmth of the sagardotegia.",
       "breadcrumbLabel": "Breadcrumb",
       "breadcrumbCurrent": "Reservations",
-      "imageAlt": "Cider house interior with barrels"
+      "imageAlt": "Candlelit cider house table with wine glasses and seasonal plates",
+      "badgeRealtime": "Real-time Availability",
+      "badgeSelectTable": "Select Your Favourite Table",
+      "badgeInstant": "Instant Confirmation"
+    },
+    "steps": {
+      "progressLabel": "Reservation progress",
+      "step1": "Select Date & Guests",
+      "step2": "Choose Area & Table",
+      "step3": "Your Details",
+      "step4": "Confirmation"
+    },
+    "section1": {
+      "title": "1. Select Date, Time & Guests",
+      "subtitle": "Choose your preferred date, time and number of guests to see available tables.",
+      "checkAvailability": "Check Availability"
+    },
+    "section2": {
+      "title": "2. Choose an Area",
+      "subtitle": "Each area offers a unique atmosphere. Select the area you prefer."
+    },
+    "areas": {
+      "restaurant": "Restaurant (Indoor)",
+      "restaurantDesc": "Traditional dining area",
+      "open-space": "Open Space",
+      "open-spaceDesc": "Outdoor seating with nature",
+      "roof-terrace": "Roof / Terrace",
+      "roof-terraceDesc": "Open air with scenic views",
+      "tablesCount": "{{count}} tables",
+      "seatsRange": "{{range}} seats"
+    },
+    "section3": {
+      "title": "3. Select a Table",
+      "subtitle": "Available tables for {{date}} at {{time}} • {{guests}} Guests • {{area}}",
+      "loading": "Checking table availability…",
+      "emptyTitle": "No tables available",
+      "emptyDesc": "There are no suitable tables in this area for {{guests}} guests at {{time}}. Try adjusting your party size, choosing another dining area, or picking a different time.",
+      "changeFilters": "Change Selections",
+      "gridLabel": "Restaurant tables",
+      "fixtureNotice": "Development preview: Tables and capacities reflect cider-house floor fixtures. Live availability updates via Socket.IO will connect in Milestone 2."
+    },
+    "legend": {
+      "label": "Table status legend",
+      "available": "Available",
+      "selected": "Selected",
+      "booked": "Booked",
+      "unavailable": "Unavailable"
+    },
+    "tableCard": {
+      "seats": "{{count}} seats"
+    },
+    "section4": {
+      "title": "4. Your Details",
+      "subtitle": "Please confirm the selected table and provide your information.",
+      "selectedTableLabel": "Selected Table",
+      "noTableSelected": "Please select an available table above to proceed with your booking.",
+      "phoneNote": "We confirm every booking by phone or WhatsApp to guarantee your table and accommodate any special requirements."
+    },
+    "confirmation": {
+      "title": "Reservation Received!",
+      "subtitle": "Your table has been reserved. We have sent a confirmation email to {{email}} and will call you to confirm all details.",
+      "referenceLabel": "Booking Reference",
+      "copyRef": "Copy booking reference",
+      "copied": "Copied to clipboard!",
+      "detailsHeading": "Reservation Summary",
+      "bookAnother": "Make Another Reservation"
     },
     "intro": {
-      "title": "Phone-first confirmation",
-      "body": "Use this form to tell us your date, party size, and any bus or group needs. We'll call or message you to confirm.",
+      "title": "Questions about large groups or special events?",
+      "body": "For celebrations, company dinners, or bus arrangements, feel free to contact the cider house directly.",
       "hours": "Lunch Thu–Sun 13:00–16:00. Dinners and Mon–Wed visits are by arrangement only.",
       "call": "Call {{phone}}",
       "whatsapp": "WhatsApp"
     },
+    "cta": {
+      "email": "info@iturrieta.eus",
+      "line1Muted": "Send us",
+      "line1Solid": " your request, and",
+      "line2Accent": "we'll confirm",
+      "line2Solid": " your",
+      "line2Muted": " table",
+      "line3Solid": "as soon as we can.",
+      "button": "Contact us"
+    },
     "tabs": {
       "label": "Booking actions",
-      "book": "New booking",
+      "book": "Book a table",
       "manage": "Manage your booking"
     },
     "form": {
       "date": "Preferred date",
+      "time": "Dining time",
+      "guests": "Guests",
+      "seats": "seats",
+      "guestSingular": "1 Guest",
+      "guestsCount": "{{count}} Guests",
+      "selectDate": "Select Date",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "dateRequired": "Please select a date.",
+      "dateInPast": "Please select a date today or in the future.",
+      "timeRequired": "Please select a dining time.",
+      "guestsRequired": "Please select at least 1 guest.",
       "slot": "Service",
       "slotLunch": "Lunch (Thu–Sun)",
       "slotDinner": "Dinner (by arrangement)",
-      "guests": "Guests",
       "busGuests": "Guests using the bus (if any)",
       "name": "Full name",
       "email": "Email",
-      "phone": "Phone",
+      "phone": "Phone number",
+      "countryCode": "Country code",
       "notes": "Notes (allergies, celebrations, bus pickup…)",
+      "notesOptional": "Special Requests (Optional)",
+      "notesPlaceholder": "Window seat, high chair, cider allergy…",
       "submit": "Submit booking request",
+      "confirmBooking": "Confirm Booking",
+      "submitting": "Confirming Booking…",
       "notice": "This stores your request in the browser until our booking API is connected. We will always confirm by phone.",
       "errorRequired": "Please fill in date, guests, name, email, and phone.",
       "successTitle": "Request received",
       "successBody": "Save your reference. We'll contact you shortly to confirm by phone or WhatsApp.",
-      "newBooking": "Send another request"
+      "newBooking": "Send another request",
+      "errors": {
+        "selectTable": "Please choose an available table before submitting your reservation.",
+        "nameRequired": "Please enter your full name.",
+        "emailRequired": "Please enter your email address.",
+        "emailInvalid": "Please enter a valid email address (e.g. name@example.com).",
+        "phoneRequired": "Please enter your phone number.",
+        "phoneInvalid": "Please enter a valid phone number with at least 6 digits."
+      }
     },
     "manage": {
       "reference": "Booking reference",
@@ -421,8 +522,8 @@
       "cancelled": "Cancelled"
     },
     "slots": {
-      "lunch": "Lunch",
-      "dinner": "Dinner"
+      "lunch": "Lunch (13:00 - 15:00)",
+      "dinner": "Dinner (20:00 - 21:00)"
     }
   },
   "placeholder": {
@@ -436,6 +537,8 @@
   "staff": {
     "loginTitle": "Staff login",
     "loginDescription": "Authentication will connect to the backend in a future milestone. This page is a placeholder.",
+    "signupTitle": "Create an account",
+    "signupDescription": "Staff and guest account registration will connect to the backend in a future milestone. This page is a placeholder.",
     "dashboardTitle": "Staff area",
     "dashboardDescription": "Protected staff tools will appear here once authentication is implemented."
   }

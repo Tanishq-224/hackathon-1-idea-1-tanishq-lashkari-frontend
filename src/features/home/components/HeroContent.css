@@ -5,7 +5,8 @@
   font-family: var(--font-sans);
 }
 
-.hero-title {
+.hero-title,
+.hero-title span {
   font-family: var(--font-display);
 }
 
