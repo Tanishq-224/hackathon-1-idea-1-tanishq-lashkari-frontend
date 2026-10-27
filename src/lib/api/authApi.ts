@@ -35,8 +35,8 @@ export async function logoutRequest(): Promise<void> {
 }
 
 /**
- * @description Loads current authenticated user.
- * @returns {Promise<{ user: AuthUser | null }>} Profile.
+ * @description Loads current authenticated user (200 with `user: null` when logged out).
+ * @returns {Promise<{ user: AuthUser | null }>} Profile when session cookies are valid.
  */
 export async function meRequest(): Promise<{ user: AuthUser | null }> {
   return apiFetch<{ user: AuthUser | null }>('/auth/me');
