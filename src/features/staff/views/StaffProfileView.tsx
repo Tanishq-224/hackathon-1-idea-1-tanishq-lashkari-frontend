@@ -13,6 +13,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { logoutRequest } from '../../../lib/api/authApi';
 import { StaffProfilePasswordPanel } from '../components/StaffProfilePasswordPanel';
+import { useStaffAuth } from '../context/StaffAuthContext';
 import { useStaffDashboard } from '../context/StaffDashboardContext';
 import { staffInitialsFromName } from '../lib/staffInitials';
 
@@ -40,6 +41,7 @@ function profileCompletionPercent(emailVerified: boolean, name: string): number 
 export function StaffProfileView() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { clearStaffSession } = useStaffAuth();
   const { session, stats } = useStaffDashboard();
 
   const initials = staffInitialsFromName(session?.name ?? session?.email ?? '?');
@@ -55,6 +57,7 @@ export function StaffProfileView() {
    */
   async function handleLogout(): Promise<void> {
     await logoutRequest();
+    clearStaffSession();
     navigate('/staff/login', { replace: true });
   }
 

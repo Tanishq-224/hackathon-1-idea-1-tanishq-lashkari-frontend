@@ -5,7 +5,9 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import i18n from '../../i18n';
+import { StaffAuthProvider } from './context/StaffAuthContext';
 import { StaffDashboardLayout } from './components/StaffDashboardLayout';
+import { StaffRoute } from './components/StaffRoute';
 import { StaffBookingsView } from './views/StaffBookingsView';
 
 vi.mock('../../lib/api/httpClient', () => ({
@@ -57,7 +59,11 @@ vi.mock('../../lib/api/authApi', () => ({
 function renderStaff(ui: ReactElement) {
   return render(
     <I18nextProvider i18n={i18n}>
-      <MemoryRouter initialEntries={['/staff/dashboard/bookings']}>{ui}</MemoryRouter>
+      <MemoryRouter initialEntries={['/staff/dashboard/bookings']}>
+        <StaffAuthProvider>
+          <StaffRoute>{ui}</StaffRoute>
+        </StaffAuthProvider>
+      </MemoryRouter>
     </I18nextProvider>,
   );
 }

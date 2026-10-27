@@ -3,16 +3,18 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { loginRequest, meRequest } from '../../lib/api/authApi';
+import { loginRequest } from '../../lib/api/authApi';
+import { StaffAuthError, useStaffAuth } from './context/StaffAuthContext';
 import { StaffAuthPageLayout } from './components/StaffAuthPageLayout';
 
 /**
- * @description Staff login with split-panel layout and local demo authentication.
+ * @description Staff login with split-panel layout and API authentication.
  * @returns {JSX.Element} Login page.
  */
 export function StaffLoginPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { establishStaffSession, refreshStaffSession } = useStaffAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [remember, setRemember] = useState(true);
@@ -23,24 +25,21 @@ export function StaffLoginPage() {
   /**
    * @description Handles login form submit.
    * @param {React.FormEvent<HTMLFormElement>} event - Form event.
-   * @returns {void}
+   * @returns {Promise<void>}
    */
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
     setError(null);
     try {
       const loginResult = await loginRequest({ email, password, staff: true });
-      const session = await meRequest();
-      const activeUser = session.user ?? loginResult.user;
-      if (
-        !activeUser ||
-        (activeUser.role !== 'staff' && activeUser.role !== 'admin')
-      ) {
+      establishStaffSession(loginResult.user);
+      void refreshStaffSession();
+      navigate('/staff/dashboard/bookings', { replace: true });
+    } catch (caught) {
+      if (caught instanceof StaffAuthError) {
         setError(t('staff.auth.sessionError'));
         return;
       }
-      navigate('/staff/dashboard/bookings', { replace: true });
-    } catch {
       setError(t('staff.auth.loginError'));
     }
   }
@@ -55,7 +54,7 @@ export function StaffLoginPage() {
       </h1>
       <p className="mt-2 text-sm text-charcoal/60">{t('staff.auth.loginLead')}</p>
 
-      <form className="mt-8 max-w-md space-y-5" onSubmit={handleSubmit} noValidate>
+      <form className="mt-8 max-w-md space-y-5" onSubmit={(event) => void handleSubmit(event)} noValidate>
         <div className="staff-auth-field">
           <label className="staff-auth-field__label" htmlFor="staff-email">
             {t('staff.auth.emailLabel')}
