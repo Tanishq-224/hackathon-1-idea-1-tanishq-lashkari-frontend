@@ -20,10 +20,11 @@ export function StaffRoute({ children }: StaffRouteProps) {
   const [user, setUser] = useState<AuthUser | null | undefined>(undefined);
 
   useEffect(() => {
+    setUser(undefined);
     meRequest()
       .then((result) => setUser(result.user))
       .catch(() => setUser(null));
-  }, []);
+  }, [location.pathname]);
 
   if (user === undefined) {
     return null;
