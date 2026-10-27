@@ -13,7 +13,6 @@ import { ManageBookingPanel } from './components/ManageBookingPanel';
 import { SelectedTableSummary } from './components/SelectedTableSummary';
 import { TableSelector } from './components/TableSelector';
 import { fetchDiningAreas, fetchTableAvailability, submitBooking } from './lib/bookingApi';
-import { AREAS_FIXTURE } from './lib/fixtures';
 import type {
   BookingRecord,
   DiningArea,
@@ -78,7 +77,8 @@ export function BookingPage() {
   const [selectedTableId, setSelectedTableId] = useState<string | null>(null);
 
   // Data states
-  const [areas, setAreas] = useState<DiningArea[]>([...AREAS_FIXTURE]);
+  const [areas, setAreas] = useState<DiningArea[]>([]);
+  const [areasLoadError, setAreasLoadError] = useState<string | null>(null);
   const [tables, setTables] = useState<TableWithAvailability[]>([]);
   const [isLoadingTables, setIsLoadingTables] = useState<boolean>(false);
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -97,11 +97,21 @@ export function BookingPage() {
     let isMounted = true;
     fetchDiningAreas()
       .then((data) => {
-        if (isMounted) setAreas(data);
+        if (isMounted) {
+          setAreas(data);
+          setAreasLoadError(null);
+          if (data[0]?.id) {
+            setAreaId(data[0].id);
+          }
+        }
       })
       .catch(() => {
-        // Fallback to static fixtures
-        if (isMounted) setAreas([...AREAS_FIXTURE]);
+        if (isMounted) {
+          setAreas([]);
+          setAreasLoadError(
+            t('bookingPage.errors.areasLoad', 'Could not load dining areas. Please try again later.'),
+          );
+        }
       });
     return () => {
       isMounted = false;
@@ -331,6 +341,14 @@ export function BookingPage() {
           <main className="booking-page__main">
             <Container className="flex flex-col gap-8 sm:gap-10">
               {/* Server or Availability Conflict Alert */}
+              {areasLoadError ? (
+                <div
+                  role="alert"
+                  className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm font-semibold text-rose-700"
+                >
+                  {areasLoadError}
+                </div>
+              ) : null}
               {serverError && (
                 <div
                   role="alert"

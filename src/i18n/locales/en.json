@@ -486,6 +486,7 @@
       "name": "Full name",
       "email": "Email",
       "phone": "Phone number",
+      "phonePlaceholder": "685 72 15 93",
       "countryCode": "Country code",
       "notes": "Notes (allergies, celebrations, bus pickup…)",
       "notesOptional": "Special Requests (Optional)",
@@ -499,6 +500,7 @@
       "successBody": "Save your reference. We'll contact you shortly to confirm by phone or WhatsApp.",
       "newBooking": "Send another request",
       "errors": {
+        "areasLoad": "Could not load dining areas. Please try again later.",
         "selectTable": "Please choose an available table before submitting your reservation.",
         "nameRequired": "Please enter your full name.",
         "emailRequired": "Please enter your email address.",
@@ -570,8 +572,23 @@
     "dashboard": {
       "eyebrow": "Reservas Iturrieta",
       "title": "Staff dashboard",
+      "navLabel": "Staff dashboard sections",
+      "mobileNavLabel": "Staff dashboard (mobile)",
       "signedInAs": "Signed in as {{name}}",
       "publicBooking": "Public booking page",
+      "bookingsLead": "Review requests, confirm tables, and keep service on track.",
+      "reservationsHeading": "Today's reservations",
+      "shiftsPageLead": "Service windows and days when the house is closed to bookings.",
+      "profileTitle": "Your profile",
+      "profileLead": "Account details and quick actions for your shift.",
+      "profileNav": "Profile",
+      "profileFallback": "Staff member",
+      "viewProfile": "View profile",
+      "profileLoading": "Loading profile…",
+      "profileEmailVerified": "Email verified",
+      "profileRole": "Role",
+      "profileYes": "Yes",
+      "profileNo": "No",
       "tabsLabel": "Dashboard sections",
       "tabs": {
         "bookings": "Bookings",
@@ -586,7 +603,13 @@
       },
       "bookingsTitle": "Table bookings",
       "filterStatus": "Status",
+      "filterService": "Service",
+      "filterAllServices": "All services",
       "filterAll": "All",
+      "slot": {
+        "lunch": "Lunch",
+        "dinner": "Dinner"
+      },
       "status": {
         "pending": "Pending",
         "confirmed": "Confirmed",
@@ -601,7 +624,12 @@
         "actions": "Actions"
       },
       "noBookings": "No bookings match this filter.",
+      "queueCount": "{{count}} in queue",
       "guests": "guests",
+      "guestsCount": "{{count}} guests",
+      "approveReservation": "Approve reservation",
+      "approveCancellation": "Approve cancellation",
+      "confirmCancelPrompt": "Approve cancellation for this reservation? The table will be released.",
       "confirm": "Confirm",
       "cancel": "Cancel",
       "shiftsTitle": "Service shifts",
@@ -615,10 +643,22 @@
       "addClosedDay": "Add closed day",
       "noClosedDays": "No closed days configured.",
       "closedDefaultReason": "Closed to bookings",
-      "floorTitle": "Floor overview",
+      "floorTitle": "Floor plan",
       "floorLead": "Track tables by area. Drag-and-drop floor editor connects to the backend in a later milestone.",
+      "floorLeadLive": "Live table map from the same availability engine as public reservations.",
+      "floorDateLabel": "Service date",
+      "floorTimeLabel": "Service time",
+      "floorGuestsLabel": "Party size (filter)",
+      "floorAreaLabel": "Dining area",
+      "floorRefresh": "Refresh floor",
+      "floorLoading": "Loading…",
+      "floorLoadError": "Could not load dining areas from the server.",
+      "floorAvailabilityError": "Could not load table availability. Check date, time, and area.",
       "floorTables": "Tables",
-      "floorBookedToday": "Active bookings today"
+      "floorBookedToday": "Active bookings today",
+      "noShifts": "No shifts returned from venue configuration.",
+      "closedDateLabel": "Closed date",
+      "closedReasonLabel": "Reason"
     }
   }
 }

@@ -15,6 +15,10 @@ type TableSelectorProps = {
   isLoading?: boolean;
   onSelectTable: (table: TableWithAvailability) => void;
   onResetFilters?: () => void;
+  /** @description When true, table cards are display-only (staff floor view). */
+  readOnly?: boolean;
+  /** @description Optional dev footnote under the grid (off by default). */
+  showFixtureNotice?: boolean;
 };
 
 /**
@@ -34,6 +38,8 @@ export function TableSelector({
   isLoading = false,
   onSelectTable,
   onResetFilters,
+  readOnly = false,
+  showFixtureNotice = false,
 }: TableSelectorProps) {
   const { t } = useTranslation();
 
@@ -120,22 +126,19 @@ export function TableSelector({
             <TableCard
               key={table.id}
               table={table}
-              isSelected={table.id === selectedTableId}
+              isSelected={!readOnly && table.id === selectedTableId}
               onSelect={onSelectTable}
+              readOnly={readOnly}
             />
           ))}
         </div>
       )}
 
-      {/* Development Fixture Clarification Footnote */}
-      <div className="mt-6 flex items-center justify-between border-t border-charcoal/10 pt-4 text-[11px] text-charcoal/55">
-        <p>
-          {t(
-            'bookingPage.section3.fixtureNotice',
-            'Development preview: Tables and capacities reflect cider-house floor fixtures. Live availability updates via Socket.IO will connect in Milestone 2.',
-          )}
-        </p>
-      </div>
+      {showFixtureNotice ? (
+        <div className="mt-6 flex items-center justify-between border-t border-charcoal/10 pt-4 text-[11px] text-charcoal/55">
+          <p>{t('bookingPage.section3.fixtureNotice')}</p>
+        </div>
+      ) : null}
     </section>
   );
 }

@@ -30,7 +30,7 @@ export function StaffLoginPage() {
     setError(null);
     try {
       await loginRequest({ email, password, staff: true });
-      navigate('/staff/dashboard', { replace: true });
+      navigate('/staff/dashboard/bookings', { replace: true });
     } catch {
       setError(t('staff.auth.loginError'));
     }

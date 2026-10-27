@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import type { ReactElement } from 'react';
 import { I18nextProvider } from 'react-i18next';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import i18n from '../../i18n';
-import { StaffDashboardPage } from './StaffDashboardPage';
+import { StaffDashboardLayout } from './components/StaffDashboardLayout';
+import { StaffBookingsView } from './views/StaffBookingsView';
 
 vi.mock('../../lib/api/httpClient', () => ({
   apiFetch: vi.fn(async (path: string) => {
@@ -49,26 +50,46 @@ vi.mock('../../lib/api/authApi', () => ({
 }));
 
 /**
- * @description Renders staff dashboard with providers.
+ * @description Renders staff dashboard routes with providers.
  * @param {ReactElement} ui - Component tree.
  * @returns {ReturnType<typeof render>} RTL result.
  */
 function renderStaff(ui: ReactElement) {
   return render(
     <I18nextProvider i18n={i18n}>
-      <MemoryRouter>{ui}</MemoryRouter>
+      <MemoryRouter initialEntries={['/staff/dashboard/bookings']}>{ui}</MemoryRouter>
     </I18nextProvider>,
   );
 }
 
-describe('StaffDashboardPage', () => {
+describe('Staff dashboard layout', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.stubGlobal(
+      'matchMedia',
+      vi.fn((query: string) => ({
+        matches: query.includes('min-width: 1024px'),
+        media: query,
+        onchange: null,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+        dispatchEvent: vi.fn(),
+      })),
+    );
   });
 
-  it('shows booking stats and demo rows', async () => {
-    renderStaff(<StaffDashboardPage />);
-    expect(await screen.findByRole('heading', { name: /Staff dashboard/i })).toBeInTheDocument();
+  it('shows booking stats and demo rows with sidebar navigation', async () => {
+    renderStaff(
+      <Routes>
+        <Route path="/staff" element={<StaffDashboardLayout />}>
+          <Route path="dashboard/bookings" element={<StaffBookingsView />} />
+        </Route>
+      </Routes>,
+    );
+    expect(await screen.findByRole('heading', { name: /Table bookings/i })).toBeInTheDocument();
     expect(await screen.findByText('ITU-DEMO01')).toBeInTheDocument();
+    expect(
+      screen.getByRole('complementary', { name: /Staff dashboard sections/i }),
+    ).toBeInTheDocument();
   });
 });

@@ -90,7 +90,12 @@ export function BookingListSelect({
 
       {open ? (
         <div className="booking-field__panel booking-field__panel--wide" id={listId} role="listbox">
-          <div className="booking-field__list">
+          <div
+            className="booking-field__list"
+            onWheel={(event) => {
+              event.stopPropagation();
+            }}
+          >
             {groupKeys.map((groupKey) => (
               <div key={groupKey || 'default'}>
                 {groupKey ? (

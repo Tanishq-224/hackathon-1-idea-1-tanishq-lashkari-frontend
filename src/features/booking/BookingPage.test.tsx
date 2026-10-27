@@ -102,8 +102,7 @@ describe('BookingPage', () => {
     const user = userEvent.setup();
     renderBooking(<BookingPage />);
 
-    // Check all three areas
-    const indoorArea = screen.getByRole('radio', { name: /restaurant \(indoor\)/i });
+    const indoorArea = await screen.findByRole('radio', { name: /restaurant \(indoor\)/i });
     const openSpaceArea = screen.getByRole('radio', { name: /open space/i });
     const roofArea = screen.getByRole('radio', { name: /roof \/ terrace/i });
 

@@ -9,6 +9,8 @@ type TableCardProps = {
   table: TableWithAvailability;
   isSelected: boolean;
   onSelect: (table: TableWithAvailability) => void;
+  /** @description Display-only card (no selection interaction). */
+  readOnly?: boolean;
 };
 
 /**
@@ -18,13 +20,13 @@ type TableCardProps = {
  * @param {TableCardProps} props - Table details, selection state and handler.
  * @returns {JSX.Element} Interactive or disabled table card button.
  */
-export function TableCard({ table, isSelected, onSelect }: TableCardProps) {
+export function TableCard({ table, isSelected, onSelect, readOnly = false }: TableCardProps) {
   const { t } = useTranslation();
 
   const isAvailable = table.status === 'available';
   const isBooked = table.status === 'booked';
   const isUnavailable = table.status === 'unavailable';
-  const isSelectable = isAvailable || isSelected;
+  const isSelectable = !readOnly && (isAvailable || isSelected);
 
   const statusLabels: Record<string, string> = {
     available: t('bookingPage.legend.available', 'Available'),

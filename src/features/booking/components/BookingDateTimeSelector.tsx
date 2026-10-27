@@ -2,7 +2,8 @@ import { ArrowRight, Clock, Users } from 'lucide-react';
 import { type FormEvent, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AVAILABLE_TIME_SLOTS } from '../lib/fixtures';
+import { AVAILABLE_TIME_SLOTS } from '../lib/bookingTimeSlots';
+import { BOOKING_GUEST_COUNTS } from '../lib/guestCountOptions';
 import { BookingDatePicker } from './BookingDatePicker';
 import type { BookingSelectOption } from './BookingListSelect';
 import { BookingListSelect } from './BookingListSelect';
@@ -55,7 +56,7 @@ export function BookingDateTimeSelector({
   }, [t]);
 
   const guestOptions = useMemo((): BookingSelectOption[] => {
-    return [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20].map((num) => ({
+    return BOOKING_GUEST_COUNTS.map((num) => ({
       value: String(num),
       label:
         num === 1

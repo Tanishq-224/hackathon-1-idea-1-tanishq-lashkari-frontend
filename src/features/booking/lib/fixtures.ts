@@ -17,8 +17,8 @@ export const AREAS_FIXTURE: readonly DiningArea[] = [
     description: 'Traditional dining area',
     imageSrc: '/images/hero-cider-house-interior.jpg',
     imageAlt: 'Interior of Iturrieta traditional dining hall with wooden tables and cider barrels',
-    tableCount: 12,
-    capacityRange: '2 - 8 seats',
+    tableCount: 16,
+    capacityRange: '2 - 10 seats',
   },
   {
     id: 'open-space',
@@ -26,8 +26,8 @@ export const AREAS_FIXTURE: readonly DiningArea[] = [
     description: 'Outdoor seating with nature',
     imageSrc: '/images/hero-outdoor-terrace.jpg',
     imageAlt: 'Outdoor dining area surrounded by green orchard and fresh air',
-    tableCount: 8,
-    capacityRange: '2 - 6 seats',
+    tableCount: 12,
+    capacityRange: '2 - 8 seats',
   },
   {
     id: 'roof-terrace',
@@ -35,8 +35,8 @@ export const AREAS_FIXTURE: readonly DiningArea[] = [
     description: 'Open air with scenic views',
     imageSrc: '/images/banner-location-mountains.jpg',
     imageAlt: 'Scenic elevated terrace looking over the Aramaio valley and mountains',
-    tableCount: 5,
-    capacityRange: '2 - 8 seats',
+    tableCount: 10,
+    capacityRange: '2 - 10 seats',
   },
 ];
 
@@ -78,16 +78,7 @@ export const TABLES_FIXTURE: readonly RestaurantTable[] = [
 ];
 
 /** @description Standard available booking time slots (lunch & dinner). */
-export const AVAILABLE_TIME_SLOTS = [
-  '13:00',
-  '13:30',
-  '14:00',
-  '14:30',
-  '15:00',
-  '20:00',
-  '20:30',
-  '21:00',
-] as const;
+export { AVAILABLE_TIME_SLOTS } from './bookingTimeSlots';
 
 /**
  * @description Computes a deterministic hash from a string to generate stable mock statuses.

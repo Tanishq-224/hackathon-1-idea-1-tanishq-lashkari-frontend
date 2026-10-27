@@ -37,7 +37,7 @@ export function StaffSignupPage() {
       );
       return;
     }
-    navigate('/staff/dashboard', { replace: true });
+    navigate('/staff/dashboard/bookings', { replace: true });
   }
 
   return (

@@ -2,6 +2,8 @@ import { ArrowRight, Loader2 } from 'lucide-react';
 import { type ChangeEvent, type FormEvent, useId, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { GuestPhoneField } from './GuestPhoneField';
+
 
 type FormValues = {
   name: string;
@@ -40,7 +42,6 @@ export function GuestDetailsForm({
   const nameId = useId();
   const emailId = useId();
   const phoneId = useId();
-  const countryCodeId = useId();
   const notesId = useId();
 
   const [values, setValues] = useState<FormValues>({
@@ -203,51 +204,16 @@ export function GuestDetailsForm({
 
       {/* Row 2: Phone Number & Special Requests */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor={phoneId}
-            className="mb-1 block text-xs font-semibold text-charcoal/80"
-          >
-            {t('bookingPage.form.phone', 'Phone Number')} <span className="text-rose-600">*</span>
-          </label>
-          <div className="flex rounded-xl border border-charcoal/20 bg-ivory/20 transition-all hover:border-charcoal/40 focus-within:border-cider focus-within:bg-white focus-within:ring-2 focus-within:ring-cider/20">
-            <label htmlFor={countryCodeId} className="sr-only">
-              {t('bookingPage.form.countryCode', 'Country code')}
-            </label>
-            <select
-              id={countryCodeId}
-              value={values.countryCode}
-              onChange={handleChange('countryCode')}
-              className="rounded-l-xl border-r border-charcoal/15 bg-transparent px-2.5 py-2.5 text-xs font-medium text-charcoal focus:outline-none"
-            >
-              <option value="+34">🇪🇸 +34</option>
-              <option value="+33">🇫🇷 +33</option>
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+49">🇩🇪 +49</option>
-              <option value="+39">🇮🇹 +39</option>
-              <option value="+351">🇵🇹 +351</option>
-            </select>
-            <input
-              id={phoneId}
-              name="phone"
-              type="tel"
-              required
-              autoComplete="tel"
-              value={values.phone}
-              onChange={handleChange('phone')}
-              placeholder="685 72 15 93"
-              aria-invalid={Boolean(errors.phone)}
-              aria-describedby={errors.phone ? `${phoneId}-error` : undefined}
-              className="flex-1 rounded-r-xl bg-transparent px-3 py-2.5 text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none"
-            />
-          </div>
-          {errors.phone && (
-            <p id={`${phoneId}-error`} className="mt-1 text-xs text-rose-600" role="alert">
-              {errors.phone}
-            </p>
-          )}
-        </div>
+        <GuestPhoneField
+          phoneId={phoneId}
+          countryCode={values.countryCode}
+          phone={values.phone}
+          error={errors.phone}
+          onCountryCodeChange={(code) =>
+            setValues((prev) => ({ ...prev, countryCode: code }))
+          }
+          onPhoneChange={handleChange('phone')}
+        />
 
         <div>
           <label
