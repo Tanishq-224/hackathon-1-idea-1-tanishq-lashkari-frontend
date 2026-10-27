@@ -1,8 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { PlaceholderPage } from '../components/feedback/PlaceholderPage';
 import { AboutPage } from '../features/about/AboutPage';
+import { BookingPage } from '../features/booking/BookingPage';
+import { ContactPage } from '../features/contact/ContactPage';
 import { HomePage } from '../features/home/HomePage';
+import { MenuPage } from '../features/menu/MenuPage';
 import { NotFoundPage } from '../features/not-found/NotFoundPage';
 import { StaffDashboardPlaceholder } from '../features/staff/StaffDashboardPlaceholder';
 import { StaffLoginPage } from '../features/staff/StaffLoginPage';
@@ -18,15 +20,9 @@ export function AppRouter() {
       <Route element={<PublicLayout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
-        <Route
-          path="menu"
-          element={<PlaceholderPage title="Menu & Experiences" />}
-        />
-        <Route
-          path="reserve"
-          element={<PlaceholderPage title="Reservations" />}
-        />
-        <Route path="contact" element={<PlaceholderPage title="Contact" />} />
+        <Route path="menu" element={<MenuPage />} />
+        <Route path="reserve" element={<BookingPage />} />
+        <Route path="contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
       <Route path="/staff/login" element={<StaffLoginPage />} />

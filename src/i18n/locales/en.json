@@ -26,9 +26,9 @@
   "footer": {
     "explore": "Explore",
     "visit": "Visit",
-    "address": "Basque Country, Spain",
-    "phone": "+34 000 000 000",
-    "hours": "Seasonal hours — details coming soon",
+    "address": "Arraga auzoa, 2 · 01169 Aramaio (Álava)",
+    "phone": "+34 685 72 15 93",
+    "hours": "Thu–Sun 13:00–16:00 · dinners by arrangement",
     "staffLogin": "Staff / Admin login",
     "rights": "All rights reserved."
   },
@@ -215,6 +215,214 @@
       "title": "Come and meet us where cider is made",
       "body": "Book your table or a guided visit and experience Basque cider from its origin.",
       "button": "Book a table"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "eyebrow": "Harremanetarako · Contact",
+      "title": "Contact & bookings",
+      "lead": "Book your table or celebration. We'll be delighted to welcome you in Aramaio.",
+      "breadcrumbLabel": "Breadcrumb",
+      "breadcrumbCurrent": "Contact",
+      "imageAlt": "Iturrieta farmhouse in the Aramaio valley"
+    },
+    "cards": {
+      "address": "Address",
+      "bookings": "Bookings",
+      "email": "Email & social"
+    },
+    "phone": {
+      "title": "Book by phone",
+      "body": "We take bookings by phone and WhatsApp. Call us and we'll confirm your table right away.",
+      "call": "Call us now",
+      "whatsapp": "Message us on WhatsApp",
+      "bookOnline": "Book online",
+      "hoursNote": "Thursday–Sunday 13:00 – 16:00 · Dinners by arrangement only · Mon–Wed closed (groups by arrangement).",
+      "holiday": "Closed for the holidays from 24 December to 1 January.",
+      "emailAlt": "If you prefer, email us at {{email}}"
+    },
+    "bus": {
+      "title": "Bus during txotx season",
+      "lead": "We offer a bus service from Vitoria-Gasteiz during txotx season. €16 round trip.",
+      "lunch": "Lunches: departure from Vitoria 13:30 · return from Iturrieta 18:00",
+      "dinner": "Dinners by arrangement: ask us about bus times",
+      "minimum": "Minimum 20 people. State in your booking how many people will use the bus.",
+      "debagoiena": "From Debagoiena or other parts of Álava, ask us about group transport.",
+      "policy": "Cancellations less than a week in advance are non-refundable."
+    },
+    "directions": {
+      "title": "Getting to Iturrieta",
+      "lead": "Arraga auzoa · 01169 Aramaio (Álava).",
+      "coords": "Coordinates: {{coords}}",
+      "warning": "Follow these roads even if your sat-nav suggests another way — some tracks in the valley do not reach the farmhouse.",
+      "mapsLink": "See the route on Google Maps",
+      "vitoria": {
+        "title": "From Vitoria-Gasteiz",
+        "body": "N-240 to Legutio, then A-2620 to Aramaio (Ibarra) and A-4025 up to the Iturrieta farmhouse."
+      },
+      "donostia": {
+        "title": "From Donostia",
+        "body": "A-8 towards Arrasate-Mondragón, exit 130. From Arrasate, enter Ibarra by the first entrance; before Arraga you'll see a wooden Iturrieta sign."
+      },
+      "bilbao": {
+        "title": "From Bilbao",
+        "body": "Motorway towards the interior — use Google Maps for the fastest seasonal route to the farmhouse."
+      }
+    },
+    "hours": {
+      "title": "Opening hours",
+      "lead": "Lunch Thursday to Sunday, 1 to 4 pm. Dinners and weekdays by arrangement only.",
+      "note": "Opening dates may vary by season — call us to confirm your booking.",
+      "rows": {
+        "thu": { "day": "Thursday", "time": "13:00 – 16:00" },
+        "fri": { "day": "Friday", "time": "13:00 – 16:00" },
+        "sat": { "day": "Saturday", "time": "13:00 – 16:00" },
+        "sun": { "day": "Sunday", "time": "13:00 – 16:00" },
+        "dinners": { "day": "Dinners", "time": "By arrangement only" },
+        "weekdays": { "day": "Mon – Wed", "time": "Closed · groups by arrangement" },
+        "christmas": { "day": "Christmas", "time": "Closed 24 December – 1 January" }
+      }
+    }
+  },
+  "menuPage": {
+    "hero": {
+      "eyebrow": "Menu & experiences",
+      "title": "Cider house menu",
+      "lead": "Fire-grilled plates, natural organic cider, and the txotx ritual — all year at the long table.",
+      "breadcrumbLabel": "Breadcrumb",
+      "breadcrumbCurrent": "Menu",
+      "imageAlt": "Guests at the cider house dining hall"
+    },
+    "menu": {
+      "title": "Sagardotegia menu",
+      "subtitle": "Cider house menu · all year",
+      "price": "45€ per person",
+      "priceNote": "We also serve a seasonal menu at the same price.",
+      "children": "Coming with kids? Children's menu €16.",
+      "item1": {
+        "name": "Txorizoa sagardotan",
+        "description": "Chorizo a la sidra — classic cider-house starter."
+      },
+      "item2": {
+        "name": "Bakailao nahaskia",
+        "description": "Revuelto de bacalao."
+      },
+      "item3": {
+        "name": "Bakailaoa piper erretan eta tipula sagardotan",
+        "description": "Bacalao con pimientos asados y cebolla a la sidra."
+      },
+      "item4": {
+        "name": "Txuletoia parrillan",
+        "description": "Chuletón a la parrilla."
+      },
+      "item5": {
+        "name": "Idiazabal gazta, irasagarra eta intxaurrak",
+        "description": "Queso Idiazabal, membrillo y nueces."
+      },
+      "item6": {
+        "name": "Sagardo «Iturrieta» ECO",
+        "description": "Sidra natural ecológica de la casa — unlimited during txotx."
+      }
+    },
+    "txotx": {
+      "title": "Txotx!",
+      "body": "Live the cider house experience: cider straight from the kupela, the grill, and a friendly atmosphere.",
+      "season": "Txotx season · January to May",
+      "label": "Service",
+      "detail": "During txotx we serve cider straight from the barrel; the rest of the year, bottled at the table."
+    },
+    "visits": {
+      "title": "Discover how cider is born",
+      "lead": "Guided visits to the farmhouse, orchards, and cellar — perfect for families and groups.",
+      "farmhouse": {
+        "title": "The farmhouse",
+        "body": "Walk the caserío and the Aramaio surroundings with our team."
+      },
+      "orchard": {
+        "title": "Apple trees",
+        "body": "See the orchards and learn how the harvest shapes each vintage."
+      },
+      "cellar": {
+        "title": "Natural cider",
+        "body": "Follow the path from apple to kupela and bottled cider."
+      },
+      "cta": "Ask about visits"
+    },
+    "shop": {
+      "title": "Take cider home",
+      "body": "Buy our natural organic cider and apple juice at the farmhouse shop.",
+      "note": "Availability follows the season — contact us before your visit.",
+      "link": "Contact us"
+    },
+    "book": {
+      "title": "Ready for the table?",
+      "body": "Reserve lunch or ask about dinners, groups, and celebrations.",
+      "primary": "Book a table",
+      "secondary": "Contact & directions"
+    }
+  },
+  "bookingPage": {
+    "hero": {
+      "eyebrow": "Erreserbak · Bookings",
+      "title": "Book your table",
+      "lead": "Send a request online — we confirm every booking by phone, just like at the cider house.",
+      "breadcrumbLabel": "Breadcrumb",
+      "breadcrumbCurrent": "Reservations",
+      "imageAlt": "Cider house interior with barrels"
+    },
+    "intro": {
+      "title": "Phone-first confirmation",
+      "body": "Use this form to tell us your date, party size, and any bus or group needs. We'll call or message you to confirm.",
+      "hours": "Lunch Thu–Sun 13:00–16:00. Dinners and Mon–Wed visits are by arrangement only.",
+      "call": "Call {{phone}}",
+      "whatsapp": "WhatsApp"
+    },
+    "tabs": {
+      "label": "Booking actions",
+      "book": "New booking",
+      "manage": "Manage your booking"
+    },
+    "form": {
+      "date": "Preferred date",
+      "slot": "Service",
+      "slotLunch": "Lunch (Thu–Sun)",
+      "slotDinner": "Dinner (by arrangement)",
+      "guests": "Guests",
+      "busGuests": "Guests using the bus (if any)",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "notes": "Notes (allergies, celebrations, bus pickup…)",
+      "submit": "Submit booking request",
+      "notice": "This stores your request in the browser until our booking API is connected. We will always confirm by phone.",
+      "errorRequired": "Please fill in date, guests, name, email, and phone.",
+      "successTitle": "Request received",
+      "successBody": "Save your reference. We'll contact you shortly to confirm by phone or WhatsApp.",
+      "newBooking": "Send another request"
+    },
+    "manage": {
+      "reference": "Booking reference",
+      "email": "Email used when booking",
+      "lookup": "Find booking",
+      "notFound": "No booking found for that reference and email.",
+      "foundTitle": "Your booking",
+      "status": "Status",
+      "date": "Date",
+      "slot": "Service",
+      "guests": "Guests",
+      "busGuests": "Bus guests",
+      "cancelRequest": "Request cancellation",
+      "cancelled": "Cancellation recorded — call us if plans change again.",
+      "phoneNote": "For changes within a week of your visit, please call the cider house directly."
+    },
+    "status": {
+      "pending": "Pending confirmation",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled"
+    },
+    "slots": {
+      "lunch": "Lunch",
+      "dinner": "Dinner"
     }
   },
   "placeholder": {
