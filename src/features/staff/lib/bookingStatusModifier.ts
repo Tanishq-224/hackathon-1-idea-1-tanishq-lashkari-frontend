@@ -12,5 +12,8 @@ export function bookingStatusModifier(status: BookingStatus): string {
   if (status === 'cancelled') {
     return 'cancelled';
   }
+  if (status === 'cancellation_requested') {
+    return 'cancel-request';
+  }
   return 'pending';
 }

@@ -2,7 +2,7 @@
 export type BookingSlot = 'lunch' | 'dinner';
 
 /** @description Lifecycle state stored until staff confirms via phone. */
-export type BookingStatus = 'pending' | 'confirmed' | 'cancelled';
+export type BookingStatus = 'pending' | 'confirmed' | 'cancellation_requested' | 'cancelled';
 
 /** @description Supported dining areas at Iturrieta Sagardotegia. */
 export type DiningAreaId = 'restaurant' | 'open-space' | 'roof-terrace';

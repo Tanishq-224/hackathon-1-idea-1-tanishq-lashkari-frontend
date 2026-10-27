@@ -46,6 +46,7 @@ export function StaffDashboardProvider({ children }: StaffDashboardProviderProps
   const [stats, setStats] = useState<StaffBookingStats>({
     pending: 0,
     confirmed: 0,
+    cancellationRequested: 0,
     cancelled: 0,
     total: 0,
   });
@@ -62,6 +63,7 @@ export function StaffDashboardProvider({ children }: StaffDashboardProviderProps
     setStats({
       pending: statRow.pending ?? 0,
       confirmed: statRow.confirmed ?? 0,
+      cancellationRequested: statRow.cancellationRequested ?? 0,
       cancelled: statRow.cancelled ?? 0,
       total: statRow.total ?? 0,
     });

@@ -36,6 +36,10 @@ export function StaffBookingsView() {
       { value: 'all', label: t('staff.dashboard.filterAll') },
       { value: 'pending', label: t('staff.dashboard.status.pending') },
       { value: 'confirmed', label: t('staff.dashboard.status.confirmed') },
+      {
+        value: 'cancellation_requested',
+        label: t('staff.dashboard.status.cancellation_requested'),
+      },
       { value: 'cancelled', label: t('staff.dashboard.status.cancelled') },
     ];
   }, [t]);
@@ -88,6 +92,24 @@ export function StaffBookingsView() {
     }
   }
 
+  /**
+   * @description Cancels a booking directly from staff (no guest request).
+   * @param {string} reference - Booking reference.
+   * @returns {Promise<void>}
+   */
+  async function handleStaffCancel(reference: string): Promise<void> {
+    const ok = window.confirm(t('staff.dashboard.confirmStaffCancelPrompt'));
+    if (!ok) {
+      return;
+    }
+    setBusyReference(reference);
+    try {
+      await updateBookingStatus(reference, 'cancelled');
+    } finally {
+      setBusyReference(null);
+    }
+  }
+
   return (
     <div className="staff-dashboard__page">
       <header className="staff-dashboard__page-head">
@@ -104,6 +126,12 @@ export function StaffBookingsView() {
           <span className="staff-dashboard__kpi-label">{t('staff.dashboard.stats.confirmed')}</span>
           <span className="staff-dashboard__kpi-value">{stats.confirmed}</span>
         </div>
+        <div className="staff-dashboard__kpi staff-dashboard__kpi--cancel-request">
+          <span className="staff-dashboard__kpi-label">
+            {t('staff.dashboard.stats.cancellationRequested')}
+          </span>
+          <span className="staff-dashboard__kpi-value">{stats.cancellationRequested}</span>
+        </div>
         <div className="staff-dashboard__kpi staff-dashboard__kpi--cancelled">
           <span className="staff-dashboard__kpi-label">{t('staff.dashboard.stats.cancelled')}</span>
           <span className="staff-dashboard__kpi-value">{stats.cancelled}</span>
@@ -113,6 +141,19 @@ export function StaffBookingsView() {
           <span className="staff-dashboard__kpi-value">{stats.total}</span>
         </div>
       </div>
+
+      {stats.cancellationRequested > 0 ? (
+        <div className="staff-dashboard__alert-banner" role="status">
+          <p>{t('staff.dashboard.cancellationQueueBanner', { count: stats.cancellationRequested })}</p>
+          <button
+            type="button"
+            className="staff-dashboard__alert-link"
+            onClick={() => setStatusFilter('cancellation_requested')}
+          >
+            {t('staff.dashboard.viewCancellationRequests')}
+          </button>
+        </div>
+      ) : null}
 
       <div className="staff-dashboard__toolbar">
         <BookingListSelect
@@ -150,6 +191,7 @@ export function StaffBookingsView() {
                   busyReference={busyReference}
                   onApprove={(ref) => void handleApprove(ref)}
                   onApproveCancellation={(ref) => void handleApproveCancellation(ref)}
+                  onStaffCancel={(ref) => void handleStaffCancel(ref)}
                 />
               </li>
             ))}

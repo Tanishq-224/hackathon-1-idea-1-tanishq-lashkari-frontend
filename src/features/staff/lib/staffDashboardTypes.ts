@@ -18,6 +18,7 @@ export type ClosedDay = { date: string; reason: string };
 export type StaffBookingStats = {
   pending: number;
   confirmed: number;
+  cancellationRequested: number;
   cancelled: number;
   total: number;
 };

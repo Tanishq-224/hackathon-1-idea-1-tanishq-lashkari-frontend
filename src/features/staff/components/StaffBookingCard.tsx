@@ -10,8 +10,10 @@ type StaffBookingCardProps = {
   booking: BookingRecord;
   /** @description Confirms a pending reservation. */
   onApprove: (reference: string) => void;
-  /** @description Marks reservation as cancelled (staff-approved). */
+  /** @description Approves a guest cancellation request. */
   onApproveCancellation: (reference: string) => void;
+  /** @description Staff-initiated cancel without guest request. */
+  onStaffCancel: (reference: string) => void;
   /** @description Whether an action is in flight for this reference. */
   busyReference: string | null;
 };
@@ -25,6 +27,7 @@ export function StaffBookingCard({
   booking,
   onApprove,
   onApproveCancellation,
+  onStaffCancel,
   busyReference,
 }: StaffBookingCardProps) {
   const { t, i18n } = useTranslation();
@@ -47,7 +50,7 @@ export function StaffBookingCard({
   const tableStatus =
     booking.status === 'cancelled'
       ? 'unavailable'
-      : booking.status === 'confirmed'
+      : booking.status === 'confirmed' || booking.status === 'cancellation_requested'
         ? 'booked'
         : 'available';
 
@@ -111,7 +114,7 @@ export function StaffBookingCard({
             {t('staff.dashboard.approveReservation')}
           </button>
         ) : null}
-        {booking.status !== 'cancelled' ? (
+        {booking.status === 'cancellation_requested' ? (
           <button
             type="button"
             className="staff-dashboard__btn staff-dashboard__btn--cancel"
@@ -119,6 +122,16 @@ export function StaffBookingCard({
             onClick={() => onApproveCancellation(booking.reference)}
           >
             {t('staff.dashboard.approveCancellation')}
+          </button>
+        ) : null}
+        {booking.status === 'pending' || booking.status === 'confirmed' ? (
+          <button
+            type="button"
+            className="staff-dashboard__btn staff-dashboard__btn--ghost-cancel"
+            disabled={isBusy}
+            onClick={() => onStaffCancel(booking.reference)}
+          >
+            {t('staff.dashboard.staffCancelBooking')}
           </button>
         ) : null}
       </div>

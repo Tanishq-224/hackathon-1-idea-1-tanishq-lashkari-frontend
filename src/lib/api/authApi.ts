@@ -41,3 +41,46 @@ export async function logoutRequest(): Promise<void> {
 export async function meRequest(): Promise<{ user: AuthUser | null }> {
   return apiFetch<{ user: AuthUser | null }>('/auth/me');
 }
+
+/**
+ * @description Changes password for the signed-in user.
+ * @param {object} input - Current and new passwords.
+ * @returns {Promise<{ message: string }>} Success message.
+ */
+export async function changePasswordRequest(input: {
+  currentPassword: string;
+  newPassword: string;
+}): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>('/auth/change-password', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
+
+/**
+ * @description Sends a password-reset OTP to the account email.
+ * @param {string} email - Account email.
+ * @returns {Promise<{ message: string }>} Generic success message.
+ */
+export async function forgotPasswordRequest(email: string): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>('/auth/forgot-password', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}
+
+/**
+ * @description Sets a new password using email OTP.
+ * @param {object} input - Email, code, and new password.
+ * @returns {Promise<{ message: string }>} Success message.
+ */
+export async function resetPasswordRequest(input: {
+  email: string;
+  code: string;
+  password: string;
+}): Promise<{ message: string }> {
+  return apiFetch<{ message: string }>('/auth/reset-password', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}

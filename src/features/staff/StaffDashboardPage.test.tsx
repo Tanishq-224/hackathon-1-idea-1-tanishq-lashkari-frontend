@@ -32,7 +32,7 @@ vi.mock('../../lib/api/httpClient', () => ({
       ];
     }
     if (path === '/booking/staff/stats') {
-      return { pending: 1, confirmed: 0, cancelled: 0, total: 1 };
+      return { pending: 1, confirmed: 0, cancellationRequested: 0, cancelled: 0, total: 1 };
     }
     if (path === '/booking/staff/operations') {
       return { shifts: [], closedDays: [] };

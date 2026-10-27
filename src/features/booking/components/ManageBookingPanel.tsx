@@ -47,7 +47,11 @@ export function ManageBookingPanel() {
     try {
       const updated = await cancelBookingApi(record.reference, record.email);
       setRecord(updated);
-      setMessage(t('bookingPage.manage.cancelled'));
+      setMessage(
+        updated.status === 'cancellation_requested'
+          ? t('bookingPage.manage.cancellationRequested')
+          : t('bookingPage.manage.cancelled'),
+      );
     } catch {
       setError(t('bookingPage.manage.notFound'));
     }
@@ -111,12 +115,17 @@ export function ManageBookingPanel() {
               </>
             ) : null}
           </dl>
-          {record.status !== 'cancelled' ? (
+          {record.status !== 'cancelled' && record.status !== 'cancellation_requested' ? (
             <div className="mt-4">
               <Button type="button" variant="secondary" onClick={handleCancel}>
                 {t('bookingPage.manage.cancelRequest')}
               </Button>
             </div>
+          ) : null}
+          {record.status === 'cancellation_requested' ? (
+            <p className="mt-4 text-sm text-olive" role="status">
+              {t('bookingPage.manage.cancellationPending')}
+            </p>
           ) : null}
           <p className="booking-notice">{t('bookingPage.manage.phoneNote')}</p>
         </div>
