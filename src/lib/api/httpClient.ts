@@ -5,15 +5,35 @@ export const DEFAULT_API_BASE = '/api/v1';
 const LOCAL_DEV_API_BASE = 'http://localhost:5000/api/v1';
 
 /**
+ * @description In production, cross-origin API URLs (e.g. Render) drop auth cookies; force same-origin proxy.
+ * @param {string} base - API base from env or default.
+ * @returns {string} Base safe for cookie credentials in the browser.
+ */
+export function coerceSameOriginApiBase(base: string): string {
+  if (typeof window === 'undefined' || !import.meta.env.PROD) {
+    return base;
+  }
+  try {
+    const resolved = base.startsWith('/')
+      ? new URL(base, window.location.origin)
+      : new URL(base);
+    if (resolved.origin !== window.location.origin) {
+      return DEFAULT_API_BASE;
+    }
+  } catch {
+    return DEFAULT_API_BASE;
+  }
+  return base;
+}
+
+/**
  * @description Resolves API base URL from env or defaults to same-origin `/api/v1`.
  * @returns {string} Base URL without trailing slash.
  */
 export function resolveApiBaseUrl(): string {
   const raw = import.meta.env.VITE_API_BASE_URL?.trim();
-  if (raw) {
-    return raw.replace(/\/$/, '');
-  }
-  return DEFAULT_API_BASE;
+  const base = raw ? raw.replace(/\/$/, '') : DEFAULT_API_BASE;
+  return coerceSameOriginApiBase(base);
 }
 
 const API_BASE = resolveApiBaseUrl();
