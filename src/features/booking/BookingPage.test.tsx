@@ -7,6 +7,27 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import i18n from '../../i18n';
 import { BookingPage } from './BookingPage';
+import { AREAS_FIXTURE, getTableAvailabilityFixture } from './lib/fixtures';
+import type { CreateBookingInput } from './types/booking';
+
+vi.mock('./lib/bookingApi', () => ({
+  fetchDiningAreas: vi.fn(async () => [...AREAS_FIXTURE]),
+  fetchTableAvailability: vi.fn(
+    async (
+      areaId: Parameters<typeof getTableAvailabilityFixture>[0],
+      date: string,
+      time: string,
+      guests: number,
+      selectedTableId: string | null = null,
+    ) => getTableAvailabilityFixture(areaId, date, time, guests, selectedTableId, new Set()),
+  ),
+  submitBooking: vi.fn(async (input: CreateBookingInput) => ({
+    ...input,
+    reference: 'ITU-TEST01',
+    status: 'pending' as const,
+    createdAt: new Date().toISOString(),
+  })),
+}));
 
 /**
  * @description Renders booking page with i18n and routing providers.

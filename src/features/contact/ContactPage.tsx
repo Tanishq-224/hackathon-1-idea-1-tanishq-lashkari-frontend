@@ -7,6 +7,7 @@ import {
 import { PublicPageHero } from '../../components/layout/PublicPageHero';
 import { Container } from '../../components/ui/Container';
 import { siteContact } from '../../lib/siteContact';
+import { ContactParallaxBand } from './components/ContactParallaxBand';
 
 const hourKeys = ['thu', 'fri', 'sat', 'sun', 'dinners', 'weekdays', 'christmas'] as const;
 const routeKeys = ['vitoria', 'donostia', 'bilbao'] as const;
@@ -22,6 +23,7 @@ export function ContactPage() {
   return (
     <article className="public-page">
       <PublicPageHero
+        parallax
         imageSrc="/images/hero-farmhouse-valley.png"
         imageAlt={t('contactPage.hero.imageAlt')}
         eyebrow={t('contactPage.hero.eyebrow')}
@@ -68,6 +70,12 @@ export function ContactPage() {
           </StaggerFade>
         </Container>
       </section>
+
+      <ContactParallaxBand
+        src="/images/contact-parallax-spread.png"
+        alt={t('contactPage.parallax.spreadAlt')}
+        captionKey="contactPage.parallax.spreadCaption"
+      />
 
       <section className="public-section public-section--surface">
         <Container>
@@ -117,6 +125,12 @@ export function ContactPage() {
           <p className="mt-4 text-sm text-charcoal/65">{t('contactPage.bus.policy')}</p>
         </Container>
       </section>
+
+      <ContactParallaxBand
+        src="/images/banner-location-mountains.jpg"
+        alt={t('contactPage.parallax.valleyAlt')}
+        captionKey="contactPage.parallax.valleyCaption"
+      />
 
       <section className="public-section public-section--surface">
         <Container className="grid gap-10 lg:grid-cols-2">

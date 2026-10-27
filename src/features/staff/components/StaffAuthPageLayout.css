@@ -1,0 +1,9 @@
+.staff-auth-page__main {
+  padding-top: 5.25rem;
+}
+
+@media (min-width: 1024px) {
+  .staff-auth-page__main {
+    min-height: min(720px, calc(100dvh - 5.25rem));
+  }
+}

@@ -10,14 +10,20 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { MobileNavigation } from './MobileNavigation';
 import './Navbar.css';
 
+type NavbarProps = {
+  /** @description Use solid bar immediately (auth pages without a hero). */
+  solidFromStart?: boolean;
+};
+
 /**
  * @description Header transparent at top, solid Cider Cellar theme after scroll (all public pages).
+ * @param {NavbarProps} props - Optional solid navbar for inner pages.
  * @returns {JSX.Element} Navbar.
  */
-export function Navbar() {
+export function Navbar({ solidFromStart = false }: NavbarProps) {
   const { t } = useTranslation();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const solidNav = useNavbarSolidOnScroll(true);
+  const solidNav = useNavbarSolidOnScroll(!solidFromStart) || solidFromStart;
 
   /**
    * @description Opens the mobile navigation drawer.

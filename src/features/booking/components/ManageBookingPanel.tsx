@@ -2,7 +2,7 @@ import { type FormEvent, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '../../../components/ui/Button';
-import { cancelBooking, findBooking } from '../lib/bookingStorage';
+import { cancelBookingApi, lookupBookingApi } from '../lib/bookingApi';
 import type { BookingRecord } from '../types/booking';
 
 /**
@@ -20,37 +20,37 @@ export function ManageBookingPanel() {
    * @param {FormEvent<HTMLFormElement>} event - Submit event.
    * @returns {void}
    */
-  const handleLookup = (event: FormEvent<HTMLFormElement>): void => {
+  const handleLookup = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     setError(null);
     setMessage(null);
     const data = new FormData(event.currentTarget);
     const reference = String(data.get('reference') ?? '');
     const email = String(data.get('email') ?? '');
-    const found = findBooking(reference, email);
-    if (!found) {
+    try {
+      const found = await lookupBookingApi(reference, email);
+      setRecord(found);
+    } catch {
       setRecord(null);
       setError(t('bookingPage.manage.notFound'));
-      return;
     }
-    setRecord(found);
   };
 
   /**
    * @description Cancels the currently loaded booking.
    * @returns {void}
    */
-  const handleCancel = (): void => {
+  const handleCancel = async (): Promise<void> => {
     if (!record) {
       return;
     }
-    const updated = cancelBooking(record.reference, record.email);
-    if (!updated) {
+    try {
+      const updated = await cancelBookingApi(record.reference, record.email);
+      setRecord(updated);
+      setMessage(t('bookingPage.manage.cancelled'));
+    } catch {
       setError(t('bookingPage.manage.notFound'));
-      return;
     }
-    setRecord(updated);
-    setMessage(t('bookingPage.manage.cancelled'));
   };
 
   return (

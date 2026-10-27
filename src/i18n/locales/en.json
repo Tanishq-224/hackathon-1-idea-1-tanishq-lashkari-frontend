@@ -228,6 +228,12 @@
       "breadcrumbCurrent": "Contact",
       "imageAlt": "Iturrieta farmhouse in the Aramaio valley"
     },
+    "parallax": {
+      "spreadAlt": "Rustic Basque dishes and cider-house table spread",
+      "spreadCaption": "Txotx season — book by phone, WhatsApp, or online.",
+      "valleyAlt": "Aramaio valley and mountains near the cider house",
+      "valleyCaption": "Find us in the heart of the Basque countryside."
+    },
     "cards": {
       "address": "Address",
       "bookings": "Bookings",
@@ -536,10 +542,83 @@
   },
   "staff": {
     "loginTitle": "Staff login",
-    "loginDescription": "Authentication will connect to the backend in a future milestone. This page is a placeholder.",
     "signupTitle": "Create an account",
-    "signupDescription": "Staff and guest account registration will connect to the backend in a future milestone. This page is a placeholder.",
-    "dashboardTitle": "Staff area",
-    "dashboardDescription": "Protected staff tools will appear here once authentication is implemented."
+    "auth": {
+      "welcomeBack": "Welcome back",
+      "createAccount": "Create an account",
+      "loginLead": "Sign in with your staff email and password.",
+      "signupLead": "Register for floor and booking management access.",
+      "emailLabel": "Email address",
+      "passwordLabel": "Password",
+      "nameLabel": "Full name",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign in",
+      "signOut": "Sign out",
+      "signUpLink": "Sign up",
+      "signInLink": "Sign in",
+      "createAccountButton": "Create account",
+      "noAccount": "Don't have an account?",
+      "haveAccount": "Already have an account?",
+      "loginError": "Invalid email or password.",
+      "signupExists": "An account with this email already exists.",
+      "signupInvalid": "Check your name, email, and password (min. 6 characters).",
+      "loginImageAlt": "Moody cider-house dining scene for staff login panel",
+      "signupImageAlt": "Rustic Basque spread for staff signup panel",
+      "demoHint": "Demo login: staff@iturrieta.eus / sagardoa1"
+    },
+    "dashboard": {
+      "eyebrow": "Reservas Iturrieta",
+      "title": "Staff dashboard",
+      "signedInAs": "Signed in as {{name}}",
+      "publicBooking": "Public booking page",
+      "tabsLabel": "Dashboard sections",
+      "tabs": {
+        "bookings": "Bookings",
+        "shifts": "Shifts & closures",
+        "floor": "Floor plan"
+      },
+      "stats": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "cancelled": "Cancelled",
+        "total": "Total"
+      },
+      "bookingsTitle": "Table bookings",
+      "filterStatus": "Status",
+      "filterAll": "All",
+      "status": {
+        "pending": "Pending",
+        "confirmed": "Confirmed",
+        "cancelled": "Cancelled"
+      },
+      "table": {
+        "reference": "Reference",
+        "guest": "Guest",
+        "when": "Date & time",
+        "table": "Table / area",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "noBookings": "No bookings match this filter.",
+      "guests": "guests",
+      "confirm": "Confirm",
+      "cancel": "Cancel",
+      "shiftsTitle": "Service shifts",
+      "shiftsLead": "Define lunch and dinner windows and the last booking time (PPT: floor & schedule).",
+      "lastBooking": "Last booking {{time}}",
+      "shiftOpen": "Accepting bookings",
+      "shiftClosed": "Closed",
+      "closedDaysTitle": "Closed days",
+      "closedDaysLead": "Block specific dates for holidays or private events.",
+      "closedReasonPlaceholder": "Reason (optional)",
+      "addClosedDay": "Add closed day",
+      "noClosedDays": "No closed days configured.",
+      "closedDefaultReason": "Closed to bookings",
+      "floorTitle": "Floor overview",
+      "floorLead": "Track tables by area. Drag-and-drop floor editor connects to the backend in a later milestone.",
+      "floorTables": "Tables",
+      "floorBookedToday": "Active bookings today"
+    }
   }
 }

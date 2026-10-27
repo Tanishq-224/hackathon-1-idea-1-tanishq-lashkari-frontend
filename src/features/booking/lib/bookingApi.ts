@@ -1,61 +1,32 @@
 /**
  * @file bookingApi.ts
- * @description Frontend API client abstraction layer for Iturrieta Sagardotegia bookings.
- *
- * ARCHITECTURAL NOTICE (Milestone 1):
- * -----------------------------------------------------------------------------------
- * The Express backend currently exposes only baseline health endpoints.
- * This client provides a typed, isolated interface bridging the React UI with development
- * fixtures and browser storage, without pretending that real-time server APIs are already live.
- *
- * PROPOSED BACKEND API CONTRACT FOR MILESTONE 2:
- * -----------------------------------------------------------------------------------
- * 1. GET /api/v1/booking/areas
- *    Returns: { success: true, data: DiningArea[] }
- *
- * 2. GET /api/v1/booking/availability
- *    Query: ?date=YYYY-MM-DD&time=HH:mm&guests=number&areaId=string
- *    Returns: { success: true, data: TableWithAvailability[] }
- *
- * 3. POST /api/v1/booking/reservations
- *    Body: {
- *      date: string;
- *      time: string;
- *      slot: 'lunch' | 'dinner';
- *      areaId: string;
- *      tableId: string;
- *      guests: number;
- *      name: string;
- *      email: string;
- *      phone: string;
- *      notes?: string;
- *    }
- *    Returns: { success: true, data: BookingRecord }
- *    Errors: 409 Conflict if table already reserved for that slot
- * -----------------------------------------------------------------------------------
+ * @description Frontend API client for Iturrieta bookings (persistent backend).
  */
 
+import { apiFetch } from '../../../lib/api/httpClient';
 import type {
   BookingRecord,
   CreateBookingInput,
   DiningArea,
   DiningAreaId,
+  TableStatus,
   TableWithAvailability,
 } from '../types/booking';
-import { createBooking, getBookedTableIds } from './bookingStorage';
-import {
-  AREAS_FIXTURE,
-  getTableAvailabilityFixture,
-} from './fixtures';
+
+type ApiTable = {
+  id: string;
+  areaId: string;
+  capacity: number;
+  label?: string;
+  status: TableStatus;
+};
 
 /**
- * @description Fetches all available dining areas.
+ * @description Fetches all available dining areas from API.
  * @returns {Promise<DiningArea[]>} List of dining areas.
  */
 export async function fetchDiningAreas(): Promise<DiningArea[]> {
-  // Simulates standard async request latency
-  await new Promise((resolve) => setTimeout(resolve, 80));
-  return [...AREAS_FIXTURE];
+  return apiFetch<DiningArea[]>('/booking/areas');
 }
 
 /**
@@ -74,39 +45,59 @@ export async function fetchTableAvailability(
   guests: number,
   selectedTableId: string | null = null,
 ): Promise<TableWithAvailability[]> {
-  // Simulates short network roundtrip
-  await new Promise((resolve) => setTimeout(resolve, 120));
-
-  const locallyBooked = getBookedTableIds(date, time);
-  return getTableAvailabilityFixture(
+  const params = new URLSearchParams({
     areaId,
     date,
     time,
-    guests,
-    selectedTableId,
-    locallyBooked,
-  );
+    guests: String(guests),
+  });
+  const rows = await apiFetch<ApiTable[]>(`/booking/availability?${params.toString()}`);
+  return rows.map((table) => ({
+    id: table.id,
+    areaId: table.areaId as DiningAreaId,
+    capacity: table.capacity,
+    label: table.label,
+    status:
+      selectedTableId && table.id === selectedTableId
+        ? ('selected' as TableStatus)
+        : table.status,
+  }));
 }
 
 /**
- * @description Submits a new booking request.
- * Persists locally and handles conflict validation.
+ * @description Submits a new booking request to the API.
  * @param {CreateBookingInput} input - Booking form values.
  * @returns {Promise<BookingRecord>} Created booking record.
  */
-export async function submitBooking(
-  input: CreateBookingInput,
-): Promise<BookingRecord> {
-  // Simulates submission latency
-  await new Promise((resolve) => setTimeout(resolve, 350));
+export async function submitBooking(input: CreateBookingInput): Promise<BookingRecord> {
+  return apiFetch<BookingRecord>('/booking/reservations', {
+    method: 'POST',
+    body: JSON.stringify(input),
+  });
+}
 
-  // Conflict validation: check if table was already booked for this slot
-  if (input.tableId && input.date && input.time) {
-    const booked = getBookedTableIds(input.date, input.time);
-    if (booked.has(input.tableId)) {
-      throw new Error('This table was just reserved. Please select another table.');
-    }
-  }
+/**
+ * @description Looks up a booking by reference and email.
+ * @param {string} reference - Booking reference.
+ * @param {string} email - Guest email.
+ * @returns {Promise<BookingRecord>} Booking record.
+ */
+export async function lookupBookingApi(reference: string, email: string): Promise<BookingRecord> {
+  return apiFetch<BookingRecord>('/booking/lookup', {
+    method: 'POST',
+    body: JSON.stringify({ reference, email }),
+  });
+}
 
-  return createBooking(input);
+/**
+ * @description Cancels a booking via API.
+ * @param {string} reference - Booking reference.
+ * @param {string} email - Guest email.
+ * @returns {Promise<BookingRecord>} Updated booking.
+ */
+export async function cancelBookingApi(reference: string, email: string): Promise<BookingRecord> {
+  return apiFetch<BookingRecord>('/booking/cancel', {
+    method: 'POST',
+    body: JSON.stringify({ reference, email }),
+  });
 }

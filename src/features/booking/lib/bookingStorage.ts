@@ -103,6 +103,108 @@ export function cancelBooking(
  * @param {string} [time] - Optional booking time (HH:mm).
  * @returns {Set<string>} Set of booked table IDs.
  */
+/**
+ * @description Returns every booking stored locally (newest first).
+ * @returns {BookingRecord[]} All booking records.
+ */
+export function listBookings(): BookingRecord[] {
+  return readAll().sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+  );
+}
+
+/**
+ * @description Updates booking status by reference (staff dashboard).
+ * @param {string} reference - Booking reference code.
+ * @param {BookingRecord['status']} status - New lifecycle status.
+ * @returns {BookingRecord | null} Updated record or null if missing.
+ */
+export function updateBookingStatus(
+  reference: string,
+  status: BookingRecord['status'],
+): BookingRecord | null {
+  const all = readAll();
+  const index = all.findIndex(
+    (item) => item.reference === reference.trim().toUpperCase(),
+  );
+  if (index < 0) {
+    return null;
+  }
+  const updated: BookingRecord = { ...all[index], status };
+  all[index] = updated;
+  writeAll(all);
+  return updated;
+}
+
+/**
+ * @description Seeds demo bookings when storage is empty (staff dashboard preview).
+ * @returns {void}
+ */
+export function seedDemoBookingsIfEmpty(): void {
+  if (readAll().length > 0) {
+    return;
+  }
+  const today = new Date();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const fmt = (date: Date) => date.toISOString().slice(0, 10);
+
+  const demos: BookingRecord[] = [
+    {
+      reference: 'ITU-DEMO01',
+      date: fmt(today),
+      slot: 'lunch',
+      time: '13:30',
+      guests: 4,
+      busGuests: 0,
+      areaId: 'restaurant',
+      tableId: 'R-2',
+      tableName: 'R-2',
+      name: 'Ane Mendizabal',
+      email: 'ane@example.com',
+      phone: '+34 600 111 222',
+      notes: 'Txotx experience',
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+    },
+    {
+      reference: 'ITU-DEMO02',
+      date: fmt(today),
+      slot: 'dinner',
+      time: '21:00',
+      guests: 6,
+      busGuests: 12,
+      areaId: 'open-space',
+      tableId: 'O-5',
+      tableName: 'O-5',
+      name: 'Jon Etxeberria',
+      email: 'jon@example.com',
+      phone: '+34 600 333 444',
+      notes: 'Company dinner',
+      status: 'confirmed',
+      createdAt: new Date(Date.now() - 3600_000).toISOString(),
+    },
+    {
+      reference: 'ITU-DEMO03',
+      date: fmt(tomorrow),
+      slot: 'lunch',
+      time: '14:00',
+      guests: 2,
+      busGuests: 0,
+      areaId: 'roof-terrace',
+      tableId: 'RT-1',
+      tableName: 'RT-1',
+      name: 'Maite Agirre',
+      email: 'maite@example.com',
+      phone: '+34 600 555 666',
+      notes: '',
+      status: 'cancelled',
+      createdAt: new Date(Date.now() - 86400_000).toISOString(),
+    },
+  ];
+  writeAll(demos);
+}
+
 export function getBookedTableIds(date: string, time?: string): Set<string> {
   const all = readAll();
   const bookedIds = new Set<string>();

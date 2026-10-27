@@ -36,6 +36,20 @@
   object-position: center 35%;
 }
 
+.page-hero-parallax {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.page-hero-parallax__image {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  object-position: center 35%;
+  will-change: transform;
+}
+
 .public-page-hero__scrim {
   position: absolute;
   inset: 0;

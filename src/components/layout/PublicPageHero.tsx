@@ -5,10 +5,13 @@ import {
   StaggerFadeItem,
 } from '../animations/StaggerFade';
 import { Container } from '../ui/Container';
+import { PageHeroParallax } from './PageHeroParallax';
 
 type PublicPageHeroProps = {
   /** @description Hero background image URL. */
   imageSrc: string;
+  /** @description Enable GSAP scroll parallax on the hero image. */
+  parallax?: boolean;
   /** @description Accessible description of the hero image. */
   imageAlt: string;
   /** @description Small label above the title. */
@@ -33,6 +36,7 @@ type PublicPageHeroProps = {
 export function PublicPageHero({
   imageSrc,
   imageAlt,
+  parallax = false,
   eyebrow,
   title,
   lead,
@@ -42,13 +46,17 @@ export function PublicPageHero({
 }: PublicPageHeroProps) {
   return (
     <header className="public-page-hero">
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="public-page-hero__image"
-        loading="eager"
-        decoding="async"
-      />
+      {parallax ? (
+        <PageHeroParallax src={imageSrc} alt={imageAlt} />
+      ) : (
+        <img
+          src={imageSrc}
+          alt={imageAlt}
+          className="public-page-hero__image"
+          loading="eager"
+          decoding="async"
+        />
+      )}
       <div className="public-page-hero__scrim" aria-hidden />
       <Container className="public-page-hero__content">
         <StaggerFade trigger="mount" staggerChildren={0.1} delayChildren={0.1}>

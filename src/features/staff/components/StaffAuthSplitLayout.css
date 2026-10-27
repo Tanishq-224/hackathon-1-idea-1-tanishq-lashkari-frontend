@@ -1,0 +1,117 @@
+.staff-auth {
+  display: grid;
+  flex: 1;
+  min-height: min(100%, 42rem);
+  background: var(--color-surface);
+}
+
+@media (min-width: 1024px) {
+  .staff-auth {
+    grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+  }
+}
+
+.staff-auth__form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 4rem);
+}
+
+.staff-auth__media-column {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  background: var(--color-charcoal);
+}
+
+@media (min-width: 1024px) {
+  .staff-auth__media-column {
+    display: block;
+  }
+}
+
+.staff-auth__media-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.staff-auth__media-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgb(30 33 29 / 0.08) 0%,
+    rgb(30 33 29 / 0.28) 100%
+  );
+  pointer-events: none;
+}
+
+.staff-auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.staff-auth-field__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgb(30 33 29 / 0.55);
+}
+
+.staff-auth-field__input-wrap {
+  position: relative;
+}
+
+.staff-auth-field__input {
+  width: 100%;
+  min-height: 2.85rem;
+  border: 1px solid rgb(30 33 29 / 0.08);
+  border-radius: 0.65rem;
+  background: rgb(233 224 208 / 0.35);
+  padding: 0.65rem 2.5rem 0.65rem 0.85rem;
+  font-size: 0.92rem;
+  color: var(--color-charcoal);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-auth-field__input:focus-visible {
+  border-color: var(--color-olive);
+  box-shadow: 0 0 0 3px rgb(105 120 90 / 0.22);
+}
+
+.staff-auth-field__valid {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  translate: 0 -50%;
+  color: var(--color-olive);
+}
+
+.staff-auth-submit {
+  display: flex;
+  width: 100%;
+  min-height: 2.85rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.65rem;
+  background: var(--color-olive);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-surface);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.staff-auth-submit:hover {
+  background: rgb(105 120 90 / 0.92);
+}
+
+.staff-auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
