@@ -569,6 +569,7 @@
       "noAccount": "Don't have an account?",
       "haveAccount": "Already have an account?",
       "loginError": "Invalid email or password.",
+      "sessionError": "Signed in, but the session cookie was not saved. Use the production site URL, disable third-party cookie blocking, or contact support.",
       "signupExists": "An account with this email already exists.",
       "signupInvalid": "Check your name, email, and password (min. 6 characters).",
       "loginImageAlt": "Moody cider-house dining scene for staff login panel",

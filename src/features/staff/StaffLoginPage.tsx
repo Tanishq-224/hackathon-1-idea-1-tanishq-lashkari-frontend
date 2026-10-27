@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 
-import { loginRequest } from '../../lib/api/authApi';
+import { loginRequest, meRequest } from '../../lib/api/authApi';
 import { StaffAuthPageLayout } from './components/StaffAuthPageLayout';
 
 /**
@@ -29,7 +29,16 @@ export function StaffLoginPage() {
     event.preventDefault();
     setError(null);
     try {
-      await loginRequest({ email, password, staff: true });
+      const loginResult = await loginRequest({ email, password, staff: true });
+      const session = await meRequest();
+      const activeUser = session.user ?? loginResult.user;
+      if (
+        !activeUser ||
+        (activeUser.role !== 'staff' && activeUser.role !== 'admin')
+      ) {
+        setError(t('staff.auth.sessionError'));
+        return;
+      }
       navigate('/staff/dashboard/bookings', { replace: true });
     } catch {
       setError(t('staff.auth.loginError'));
