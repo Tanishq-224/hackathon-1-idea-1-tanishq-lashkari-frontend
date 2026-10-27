@@ -11,6 +11,7 @@ import {
 import { meRequest, type AuthUser } from '../../../lib/api/authApi';
 import { apiFetch } from '../../../lib/api/httpClient';
 import type { BookingRecord, BookingStatus } from '../../booking/types/booking';
+import { useStaffAuth } from './StaffAuthContext';
 import type { ClosedDay, ServiceShift, StaffBookingStats } from '../lib/staffDashboardTypes';
 
 type StaffDashboardContextValue = {
@@ -38,7 +39,14 @@ type StaffDashboardProviderProps = {
  * @returns {JSX.Element} Context provider.
  */
 export function StaffDashboardProvider({ children }: StaffDashboardProviderProps) {
-  const [session, setSession] = useState<AuthUser | null>(null);
+  const { staffUser } = useStaffAuth();
+  const [session, setSession] = useState<AuthUser | null>(() => staffUser);
+
+  useEffect(() => {
+    if (staffUser) {
+      setSession(staffUser);
+    }
+  }, [staffUser]);
   const [bookings, setBookings] = useState<BookingRecord[]>([]);
   const [shifts, setShifts] = useState<ServiceShift[]>([]);
   const [closedDays, setClosedDays] = useState<ClosedDay[]>([]);
@@ -69,8 +77,8 @@ export function StaffDashboardProvider({ children }: StaffDashboardProviderProps
     });
     setShifts(ops.shifts);
     setClosedDays(ops.closedDays);
-    setSession(profile.user);
-  }, [statusFilter]);
+    setSession(profile.user ?? staffUser ?? null);
+  }, [statusFilter, staffUser]);
 
   useEffect(() => {
     void refreshDashboard();
@@ -95,7 +103,7 @@ export function StaffDashboardProvider({ children }: StaffDashboardProviderProps
 
   const value = useMemo(
     () => ({
-      session,
+      session: session ?? staffUser,
       bookings,
       stats,
       shifts,
@@ -105,16 +113,7 @@ export function StaffDashboardProvider({ children }: StaffDashboardProviderProps
       refreshDashboard,
       updateBookingStatus,
     }),
-    [
-      session,
-      bookings,
-      stats,
-      shifts,
-      closedDays,
-      statusFilter,
-      refreshDashboard,
-      updateBookingStatus,
-    ],
+    [session, staffUser, bookings, stats, shifts, closedDays, statusFilter, refreshDashboard, updateBookingStatus],
   );
 
   return (
